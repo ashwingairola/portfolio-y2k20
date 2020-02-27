@@ -6,10 +6,10 @@
 		"portfolio-y2k20": {
 			"projectType": "application",
 			"schematics": {
-                "@schematics/angular:component": {
-                    "style": "scss"
-                }
-            },
+				"@schematics/angular:component": {
+					"style": "scss"
+				}
+			},
 			"root": "",
 			"sourceRoot": "src",
 			"prefix": "ag",
@@ -27,7 +27,7 @@
 						"tsConfig": "tsconfig.app.json",
 						"aot": true,
 						"assets": ["src/favicon.ico", "src/assets"],
-						"styles": ["src/styles/styles.scss"],
+						"styles": ["src/styles/styles.scss", "src/styles/tailwind.scss"],
 						"scripts": []
 					},
 					"configurations": {
@@ -89,7 +89,7 @@
 						"tsConfig": "tsconfig.spec.json",
 						"karmaConfig": "karma.conf.js",
 						"assets": ["src/favicon.ico", "src/assets"],
-						"styles": ["src/styles/styles.scss"],
+						"styles": ["src/styles/styles.scss", "src/styles/tailwind.scss"],
 						"scripts": []
 					}
 				},
