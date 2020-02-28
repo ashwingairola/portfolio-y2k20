@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
+import { environment as env } from '@ag-env';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portfolio-y2k20';
+	resumeUrl: string;
+	resumeFilename: string;
+
+	constructor() {
+		this.resumeUrl = env.resume.url;
+		this.resumeFilename = env.resume.filename;
+	}
 }

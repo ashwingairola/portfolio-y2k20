@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+	production: false,
+	resume: {
+		url: `assets/files/Ashwin's Resume.pdf`,
+		filename: 'ashwin_gairola_resume.pdf'
+	}
 };
 
 /*
