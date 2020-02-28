@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { environment as env } from '@ag-env';
 
 @Component({
-	selector: 'app-root',
+	selector: 'ag-root',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.scss']
 })
