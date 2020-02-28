@@ -10,7 +10,13 @@
 		"contextual-lifecycle": true,
 		"directive-class-suffix": true,
 		"directive-selector": [true, "attribute", "ag", "camelCase"],
-		"component-selector": [true, "element", "ag", "kebab-case"],
+		"component-selector": [
+			true,
+			["element", "attribute"],
+			"ag",
+			"kebab-case",
+			"camelCase"
+		],
 		"import-blacklist": [true, "rxjs/Rx"],
 		"interface-name": false,
 		"max-classes-per-file": false,
