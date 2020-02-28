@@ -2,7 +2,14 @@
 	<section class="container mx-auto flex flex-between">
 		<div>AG</div>
 		<div class="flex">
-			<button agButton [color]="'primary'">Download Resume</button>
+			<a
+				agButton
+				[color]="'primary'"
+				href="assets/files/Ashwin's Resume.pdf"
+				download="Ashwin's Resume.pdf"
+			>
+				Download Resume
+			</a>
 		</div>
 	</section>
 </ag-navbar>
