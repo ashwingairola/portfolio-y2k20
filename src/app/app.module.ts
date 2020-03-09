@@ -5,6 +5,8 @@ import { NavbarModule, ButtonModule } from '@ag-modules';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SidenavModule } from './modules/sidenav/sidenav.module';
+import { IconModule } from './modules/icon/icon.module';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -12,6 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 		BrowserModule,
 		AppRoutingModule,
 		NavbarModule,
+		SidenavModule,
+		IconModule,
 		ButtonModule
 	],
 	providers: [],
