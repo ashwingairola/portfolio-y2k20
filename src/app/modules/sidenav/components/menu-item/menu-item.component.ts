@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
 	selector: 'ag-menu-item',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./menu-item.component.scss']
 })
 export class MenuItemComponent implements OnInit {
-	constructor() {}
+	constructor(private container: ElementRef, private renderer: Renderer2) {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		const el = this.container.nativeElement;
+	}
 }

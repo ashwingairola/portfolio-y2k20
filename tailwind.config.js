@@ -3,6 +3,8 @@ module.exports = {
 		textColor: {
 			primary: 'var(--color-text-primary)',
 			secondary: 'var(--color-text-secondary)',
+			'app-primary': 'var(--color-primary)',
+			'app-secondary': 'var(--color-secondary)',
 			navbar: 'var(--color-text-navbar)'
 		},
 		backgroundColor: {
@@ -17,8 +19,8 @@ module.exports = {
 			...theme('spacing'),
 			full: '100%',
 			half: '50%',
-            screen: '100vh',
-            '50vh': '50vh'
+			screen: '100vh',
+			'50vh': '50vh'
 		})
 	}
 };

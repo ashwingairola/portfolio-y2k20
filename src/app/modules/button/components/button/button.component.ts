@@ -11,6 +11,7 @@ export class ButtonComponent implements OnInit {
 	hostElement: HTMLButtonElement | HTMLAnchorElement;
 
 	constructor(private elementRef: ElementRef, private renderer: Renderer2) {
+		this.color = 'none';
 		this.hostElement = this.elementRef.nativeElement;
 	}
 

@@ -1,0 +1,18 @@
+<div class="relative h-full flex flex-col justify-center text-center">
+	<ag-icon
+		class="absolute inset-x-0 inset-y-auto"
+		[icon]="icon"
+		[iconSize]="'medium'"
+		[color]="'primary'"
+		[@showHide]
+		*ngIf="!hovering"
+	></ag-icon>
+	<ag-icon
+		class="absolute inset-x-0 inset-y-auto"
+		[icon]="icon"
+		[iconSize]="'medium'"
+		[color]="'bgPrimary'"
+		[@showHide]
+		*ngIf="hovering"
+	></ag-icon>
+</div>
