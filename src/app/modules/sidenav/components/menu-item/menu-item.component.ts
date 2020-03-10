@@ -1,14 +1,40 @@
-import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import {
+	trigger,
+	state,
+	style,
+	animate,
+	transition
+} from '@angular/animations';
 
 @Component({
 	selector: 'ag-menu-item',
 	templateUrl: './menu-item.component.html',
-	styleUrls: ['./menu-item.component.scss']
+	styleUrls: ['./menu-item.component.scss'],
+	animations: [
+		trigger('showOnHover', [
+			state('*', style({ opacity: 0 })),
+			state('hover', style({ opacity: 0.5 })),
+			transition('* <=> hover', [animate('0.2s')])
+		])
+	]
 })
 export class MenuItemComponent implements OnInit {
-	constructor(private container: ElementRef, private renderer: Renderer2) {}
+	hovering: boolean;
 
-	ngOnInit(): void {
-		const el = this.container.nativeElement;
+	constructor() {
+		this.hovering = false;
+	}
+
+	ngOnInit(): void {}
+
+	@HostListener('mouseenter')
+	onMouseEnter() {
+		this.hovering = true;
+	}
+
+	@HostListener('mouseleave')
+	onMouseLeave() {
+		this.hovering = false;
 	}
 }
