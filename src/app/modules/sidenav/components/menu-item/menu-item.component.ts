@@ -16,14 +16,21 @@ import {
 			state('*', style({ opacity: 0 })),
 			state('hover', style({ opacity: 0.5 })),
 			transition('* <=> hover', [animate('0.2s')])
-		])
+        ]),
+        trigger('onActive', [
+            state('*', style({opacity: 0})),
+            state('active', style({opacity: 1})),
+            transition('* <=> active', [animate('0.2s')])
+        ])
 	]
 })
 export class MenuItemComponent implements OnInit {
-	hovering: boolean;
+    hovering: boolean;
+    clicked: boolean;
 
 	constructor() {
-		this.hovering = false;
+        this.hovering = false;
+        this.clicked = false;
 	}
 
 	ngOnInit(): void {}
@@ -36,5 +43,15 @@ export class MenuItemComponent implements OnInit {
 	@HostListener('mouseleave')
 	onMouseLeave() {
 		this.hovering = false;
-	}
+    }
+    
+    @HostListener('mousedown')
+    onMouseDown() {
+        this.clicked = true;
+    }
+
+    @HostListener('mouseup')
+    onMouseUp() {
+        this.clicked = false;
+    }
 }
