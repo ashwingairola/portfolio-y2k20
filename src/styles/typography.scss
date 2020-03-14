@@ -3,7 +3,31 @@
 	src: url('../assets/fonts/commando-webfont.woff') format('woff');
 }
 
-.ag-font-1 {
-    font-family: 'Commando', sans-serif;
+@font-face {
+	font-family: 'Caviar Dreams';
+	src: url('../assets/fonts/CaviarDreams-webfont.woff');
+	font-style: normal;
+	font-weight: 400;
 }
 
+@font-face {
+	font-family: 'Caviar Dreams';
+	src: url('../assets/fonts/CaviarDreams_Italic-webfont.woff');
+	font-style: italic;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Caviar Dreams';
+	src: url('../assets/fonts/Caviar_Dreams_Bold-webfont.woff');
+	font-style: normal;
+	font-weight: 700;
+}
+
+.ag-font-1 {
+	font-family: 'Commando', sans-serif;
+}
+
+.ag-font-2 {
+	font-family: 'Caviar Dreams', sans-serif;
+}
