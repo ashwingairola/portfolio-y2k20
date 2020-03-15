@@ -1,4 +1,9 @@
-import { Component, HostListener } from '@angular/core';
+import {
+	Component,
+	HostListener,
+	EventEmitter,
+	ElementRef
+} from '@angular/core';
 
 @Component({
 	selector: 'ag-clickable',
@@ -8,10 +13,14 @@ import { Component, HostListener } from '@angular/core';
 export class ClickableComponent {
 	public hovering: boolean;
 	public clicked: boolean;
+	public touched: boolean;
+	public click: EventEmitter<MouseEvent>;
 
-	constructor() {
+	constructor(private element: ElementRef) {
 		this.hovering = false;
 		this.clicked = false;
+		this.touched = false;
+		this.click = new EventEmitter();
 	}
 
 	@HostListener('mouseenter')
@@ -32,5 +41,19 @@ export class ClickableComponent {
 	@HostListener('mouseup')
 	onMouseUp() {
 		this.clicked = false;
+	}
+
+	@HostListener('touchstart')
+	onTouchStart() {
+		console.log('TOUCHED');
+		this.touched = true;
+	}
+
+	@HostListener('touchend')
+	onTouchEnd() {
+		console.log('NOT TOUCHING');
+		this.touched = false;
+		this.element.nativeElement.click();
+		return false;
 	}
 }
