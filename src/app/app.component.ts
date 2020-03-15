@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { environment as env } from '@ag-env';
 
 @Component({
 	selector: 'ag-root',
@@ -7,11 +6,5 @@ import { environment as env } from '@ag-env';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	resumeUrl: string;
-	resumeFilename: string;
-
-	constructor() {
-		this.resumeUrl = env.resume.url;
-		this.resumeFilename = env.resume.filename;
-	}
+	constructor() {}
 }
