@@ -34,6 +34,27 @@
 			</ag-menu-item>
 		</ag-sidenav>
 	</section>
+
+	<section class="block sm:hidden">
+		<ag-bottomnav>
+			<ag-bottomnav-item>
+				<ag-sidenav-item [icon]="'fa-home'"></ag-sidenav-item>
+			</ag-bottomnav-item>
+			<ag-bottomnav-item>
+				<ag-sidenav-item [icon]="'fa-code'"></ag-sidenav-item>
+			</ag-bottomnav-item>
+			<ag-bottomnav-item>
+				<ag-sidenav-item [icon]="'fa-palette'"></ag-sidenav-item>
+			</ag-bottomnav-item>
+			<ag-bottomnav-item>
+				<ag-sidenav-item [icon]="'fa-phone'"></ag-sidenav-item>
+			</ag-bottomnav-item>
+			<ag-bottomnav-item>
+				<ag-sidenav-item [icon]="'fa-file-alt'"></ag-sidenav-item>
+			</ag-bottomnav-item>
+		</ag-bottomnav>
+	</section>
+
 	<section class="sm:ml-16 p-8 flex-grow">
 		<router-outlet></router-outlet>
 	</section>
