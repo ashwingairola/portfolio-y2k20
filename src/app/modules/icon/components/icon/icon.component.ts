@@ -11,7 +11,9 @@ import {
 	faCode,
 	faPalette,
 	faPhone,
-	faFileAlt
+	faFileAlt,
+	faMapMarkerAlt,
+	faBriefcase
 } from '@fortawesome/free-solid-svg-icons';
 import { ThemeColor } from 'src/app/modules/models/color.model';
 
@@ -30,6 +32,8 @@ export class IconComponent implements OnInit, AfterViewInit {
 	faPalette = faPalette;
 	faPhone = faPhone;
 	faFileAlt = faFileAlt;
+	faMapMarkerAlt = faMapMarkerAlt;
+	faBriefcase = faBriefcase;
 
 	constructor(private container: ElementRef, private renderer: Renderer2) {
 		this.iconSize = 'small';
