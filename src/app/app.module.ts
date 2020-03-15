@@ -11,11 +11,11 @@ import {
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { SidenavItemComponent } from './components/sidenav-item/sidenav-item.component';
 import { ClickableComponent } from './components/clickable/clickable.component';
+import { MenuItemComponent } from './components/menu-item/menu-item.component';
 
 @NgModule({
-	declarations: [AppComponent, SidenavItemComponent, ClickableComponent],
+	declarations: [AppComponent, MenuItemComponent, ClickableComponent],
 	imports: [
 		BrowserModule,
 		BrowserAnimationsModule,

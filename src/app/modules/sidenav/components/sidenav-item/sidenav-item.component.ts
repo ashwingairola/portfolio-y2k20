@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import {
 	trigger,
 	state,
@@ -9,9 +9,9 @@ import {
 import { ClickableComponent } from 'src/app/components/clickable/clickable.component';
 
 @Component({
-	selector: 'ag-menu-item',
-	templateUrl: './menu-item.component.html',
-	styleUrls: ['./menu-item.component.scss'],
+	selector: 'ag-sidenav-item',
+	templateUrl: './sidenav-item.component.html',
+	styleUrls: ['./sidenav-item.component.scss'],
 	animations: [
 		trigger('showOnHover', [
 			state('*', style({ opacity: 0 })),
@@ -25,7 +25,7 @@ import { ClickableComponent } from 'src/app/components/clickable/clickable.compo
 		])
 	]
 })
-export class MenuItemComponent extends ClickableComponent {
+export class SidenavItemComponent extends ClickableComponent {
 	constructor(elementRef: ElementRef) {
 		super(elementRef);
 	}

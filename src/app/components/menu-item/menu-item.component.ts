@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, Input } from '@angular/core';
+import { Component, Input, HostListener } from '@angular/core';
 import {
 	state,
 	trigger,
@@ -8,9 +8,9 @@ import {
 } from '@angular/animations';
 
 @Component({
-	selector: 'ag-sidenav-item',
-	templateUrl: './sidenav-item.component.html',
-	styleUrls: ['./sidenav-item.component.scss'],
+	selector: 'ag-menu-item',
+	templateUrl: './menu-item.component.html',
+	styleUrls: ['./menu-item.component.scss'],
 	animations: [
 		trigger('showHide', [
 			state('*', style({ opacity: 1 })),
@@ -19,15 +19,13 @@ import {
 		])
 	]
 })
-export class SidenavItemComponent implements OnInit {
+export class MenuItemComponent {
 	@Input() icon!: string;
 	hovering: boolean;
 
 	constructor() {
 		this.hovering = false;
 	}
-
-	ngOnInit(): void {}
 
 	@HostListener('mouseenter')
 	onMouseEnter() {
