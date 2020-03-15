@@ -22,7 +22,14 @@
 		Dehradun, Uttarakhand, India
 	</div>
 
-	<button agButton [color]="'primary'" (click)="downloadResume()" class="my-4">
-		Download Résumé
-	</button>
+	<div class="mt-4">
+		<a
+			agButton
+			[color]="'primary'"
+			href="{{ resumeUrl }}"
+			download="{{ resumeFilename }}"
+		>
+			Download Résumé
+		</a>
+	</div>
 </div>
