@@ -1,7 +1,8 @@
 :host {
-    border-radius: 99px;
+	border-radius: 99px;
+	display: inline-block;
 
-    &:focus {
-        outline: none;
-    }
+	&:focus {
+		outline: none;
+	}
 }
