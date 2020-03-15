@@ -1,10 +1,29 @@
 import { Component, OnInit, ElementRef, Input, Renderer2 } from '@angular/core';
 import { ThemeColor } from 'src/app/modules/models/color.model';
+import {
+	trigger,
+	state,
+	style,
+	transition,
+	animate
+} from '@angular/animations';
 
 @Component({
 	selector: 'button [agButton], a [agButton]',
 	templateUrl: './button.component.html',
-	styleUrls: ['./button.component.scss']
+	styleUrls: ['./button.component.scss'],
+	animations: [
+		trigger('showOnHover', [
+			state('*', style({ opacity: 0 })),
+			state('hover', style({ opacity: 0.5 })),
+			transition('* <=> hover', [animate('0.2s')])
+		]),
+		trigger('onActive', [
+			state('*', style({ opacity: 0 })),
+			state('active', style({ opacity: 1 })),
+			transition('* <=> active', [animate('0.2s')])
+		])
+	]
 })
 export class ButtonComponent implements OnInit {
 	@Input() color: ThemeColor;
