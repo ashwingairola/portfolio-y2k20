@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import {
 	trigger,
 	state,
@@ -6,6 +6,7 @@ import {
 	animate,
 	transition
 } from '@angular/animations';
+import { ClickableComponent } from 'src/app/components/clickable/clickable.component';
 
 @Component({
 	selector: 'ag-menu-item',
@@ -16,42 +17,16 @@ import {
 			state('*', style({ opacity: 0 })),
 			state('hover', style({ opacity: 0.5 })),
 			transition('* <=> hover', [animate('0.2s')])
-        ]),
-        trigger('onActive', [
-            state('*', style({opacity: 0})),
-            state('active', style({opacity: 1})),
-            transition('* <=> active', [animate('0.2s')])
-        ])
+		]),
+		trigger('onActive', [
+			state('*', style({ opacity: 0 })),
+			state('active', style({ opacity: 0.7 })),
+			transition('* <=> active', [animate('0.2s')])
+		])
 	]
 })
-export class MenuItemComponent implements OnInit {
-    hovering: boolean;
-    clicked: boolean;
-
+export class MenuItemComponent extends ClickableComponent {
 	constructor() {
-        this.hovering = false;
-        this.clicked = false;
+		super();
 	}
-
-	ngOnInit(): void {}
-
-	@HostListener('mouseenter')
-	onMouseEnter() {
-		this.hovering = true;
-	}
-
-	@HostListener('mouseleave')
-	onMouseLeave() {
-		this.hovering = false;
-    }
-    
-    @HostListener('mousedown')
-    onMouseDown() {
-        this.clicked = true;
-    }
-
-    @HostListener('mouseup')
-    onMouseUp() {
-        this.clicked = false;
-    }
 }

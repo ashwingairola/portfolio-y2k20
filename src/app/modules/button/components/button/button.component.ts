@@ -7,6 +7,7 @@ import {
 	transition,
 	animate
 } from '@angular/animations';
+import { ClickableComponent } from 'src/app/components/clickable/clickable.component';
 
 @Component({
 	selector: 'button [agButton], a [agButton]',
@@ -20,16 +21,18 @@ import {
 		]),
 		trigger('onActive', [
 			state('*', style({ opacity: 0 })),
-			state('active', style({ opacity: 1 })),
+			state('active', style({ opacity: 0.7 })),
 			transition('* <=> active', [animate('0.2s')])
 		])
 	]
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent extends ClickableComponent implements OnInit {
 	@Input() color: ThemeColor;
 	hostElement: HTMLButtonElement | HTMLAnchorElement;
 
 	constructor(private elementRef: ElementRef, private renderer: Renderer2) {
+		super();
+
 		this.color = 'none';
 		this.hostElement = this.elementRef.nativeElement;
 	}
