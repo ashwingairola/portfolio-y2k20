@@ -7,9 +7,10 @@ import { SidenavModule, ButtonModule, IconModule } from '@ag-modules';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SidenavItemComponent } from './components/sidenav-item/sidenav-item.component';
+import { ClickableComponent } from './components/clickable/clickable.component';
 
 @NgModule({
-	declarations: [AppComponent, SidenavItemComponent],
+	declarations: [AppComponent, SidenavItemComponent, ClickableComponent],
 	imports: [
 		BrowserModule,
 		BrowserAnimationsModule,
