@@ -31,7 +31,7 @@ export class ButtonComponent extends ClickableComponent implements OnInit {
 	hostElement: HTMLButtonElement | HTMLAnchorElement;
 
 	constructor(private elementRef: ElementRef, private renderer: Renderer2) {
-		super();
+		super(elementRef);
 
 		this.color = 'none';
 		this.hostElement = this.elementRef.nativeElement;

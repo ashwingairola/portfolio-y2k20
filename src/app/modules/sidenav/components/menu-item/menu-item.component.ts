@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import {
 	trigger,
 	state,
@@ -26,7 +26,7 @@ import { ClickableComponent } from 'src/app/components/clickable/clickable.compo
 	]
 })
 export class MenuItemComponent extends ClickableComponent {
-	constructor() {
-		super();
+	constructor(elementRef: ElementRef) {
+		super(elementRef);
 	}
 }

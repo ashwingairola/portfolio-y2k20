@@ -10,6 +10,6 @@
 
 	<div
 		class="bg-app-secondary absolute top-0 z-0 h-full w-full"
-		[@onActive]="clicked ? 'active' : '*'"
+		[@onActive]="clicked || touched ? 'active' : '*'"
 	></div>
 </div>
