@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ag-banner',
-  templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.scss']
+	selector: 'ag-banner',
+	templateUrl: './banner.component.html',
+	styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent implements OnInit {
+	constructor() {}
 
-  constructor() { }
+	ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
+	downloadResume() {
+		console.log('DOWNLOADING');
+	}
 }
