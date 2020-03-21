@@ -1,1 +1,5 @@
-
+ag-sidenav-item {
+	&:focus {
+		outline: none;
+	}
+}

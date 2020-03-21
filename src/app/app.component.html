@@ -1,16 +1,16 @@
 <section class="flex">
 	<section class="w-16 h-screen fixed hidden sm:block">
 		<ag-sidenav>
-			<ag-sidenav-item>
+			<ag-sidenav-item [routerLink]="['']" fragment="banner">
 				<ag-menu-item [icon]="'fa-home'"></ag-menu-item>
 			</ag-sidenav-item>
-			<ag-sidenav-item>
+			<ag-sidenav-item [routerLink]="['']" fragment="my-work">
 				<ag-menu-item [icon]="'fa-code'"></ag-menu-item>
 			</ag-sidenav-item>
-			<ag-sidenav-item>
+			<ag-sidenav-item [routerLink]="['']" fragment="my-skills">
 				<ag-menu-item [icon]="'fa-palette'"></ag-menu-item>
 			</ag-sidenav-item>
-			<ag-sidenav-item>
+			<ag-sidenav-item [routerLink]="['']" fragment="contact">
 				<ag-menu-item [icon]="'fa-phone'"></ag-menu-item>
 			</ag-sidenav-item>
 			<ag-sidenav-item>
@@ -21,16 +21,16 @@
 
 	<section class="block sm:hidden">
 		<ag-bottomnav>
-			<ag-bottomnav-item>
+			<ag-bottomnav-item [routerLink]="['']" fragment="banner">
 				<ag-menu-item [icon]="'fa-home'"></ag-menu-item>
 			</ag-bottomnav-item>
-			<ag-bottomnav-item>
+			<ag-bottomnav-item [routerLink]="['']" fragment="my-work">
 				<ag-menu-item [icon]="'fa-code'"></ag-menu-item>
 			</ag-bottomnav-item>
-			<ag-bottomnav-item>
+			<ag-bottomnav-item [routerLink]="['']" fragment="my-skills">
 				<ag-menu-item [icon]="'fa-palette'"></ag-menu-item>
 			</ag-bottomnav-item>
-			<ag-bottomnav-item>
+			<ag-bottomnav-item [routerLink]="['']" fragment="contact">
 				<ag-menu-item [icon]="'fa-phone'"></ag-menu-item>
 			</ag-bottomnav-item>
 			<ag-bottomnav-item>
