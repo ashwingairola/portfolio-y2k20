@@ -1,5 +1,5 @@
-<section class="flex">
-	<section class="w-16 h-screen fixed hidden sm:block">
+<section class="flex w-full fixed">
+	<section class="w-16 h-screen max-h-screen hidden sm:block">
 		<ag-sidenav>
 			<ag-sidenav-item [routerLink]="['']" fragment="banner">
 				<ag-menu-item [icon]="'fa-home'"></ag-menu-item>
@@ -39,7 +39,11 @@
 		</ag-bottomnav>
 	</section>
 
-	<section class="sm:ml-16 p-8 flex-grow">
-		<router-outlet></router-outlet>
+	<section
+		class="pb-16 sm:pb-0 p-8 flex-grow w-full h-screen overflow-auto overflow-y-scroll"
+	>
+		<section class="mx-auto">
+			<router-outlet></router-outlet>
+		</section>
 	</section>
 </section>
