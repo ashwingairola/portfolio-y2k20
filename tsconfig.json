@@ -16,10 +16,11 @@
 		"strictNullChecks": true,
 		"strictPropertyInitialization": true,
 		"paths": {
+			"@ag-apis": ["src/app/apis/index.ts"],
 			"@ag-env": ["src/environments/environment"],
+			"@ag-models": ["src/app/models/index.ts"],
 			"@ag-modules": ["src/app/modules/index.ts"],
-			"@ag-services": ["src/app/services/index.ts"],
-			"@ag-models": ["src/app/models/index.ts"]
+			"@ag-services": ["src/app/services/index.ts"]
 		}
 	},
 	"angularCompilerOptions": {
