@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { IconModule, ButtonModule, SliderModule } from '@ag-modules';
+import { IconModule, ButtonModule, CardModule, SliderModule } from '@ag-modules';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './components/home/home.component';
@@ -15,7 +15,8 @@ import { MyWorkComponent } from './components/my-work/my-work.component';
 		HomeRoutingModule,
 		IconModule,
 		ButtonModule,
-		SliderModule
+		SliderModule,
+		CardModule
 	]
 })
 export class HomeModule {}
