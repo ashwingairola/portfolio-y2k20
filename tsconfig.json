@@ -18,7 +18,8 @@
 		"paths": {
 			"@ag-env": ["src/environments/environment"],
 			"@ag-modules": ["src/app/modules/index.ts"],
-			"@ag-services": ["src/app/services/index.ts"]
+			"@ag-services": ["src/app/services/index.ts"],
+			"@ag-models": ["src/app/models/index.ts"]
 		}
 	},
 	"angularCompilerOptions": {
