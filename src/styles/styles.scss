@@ -8,21 +8,37 @@
 }
 
 .ag-text {
-    @extend .ag-font-2;
-    @extend .font-normal;
+	@extend .ag-font-2;
+	@extend .font-normal;
 }
 
 .ag-text-2 {
-    @extend .ag-text;
-    @extend .text-lg;
+	@extend .ag-text;
+	@extend .text-lg;
 }
 
 .ag-text-3 {
-    @extend .ag-text;
-    @extend .text-xl;
+	@extend .ag-text;
+	@extend .text-xl;
 }
 
 .ag-text-4 {
-    @extend .ag-text;
-    @extend .text-2xl;
+	@extend .ag-text;
+	@extend .text-2xl;
+}
+
+// SCROLLBARS
+
+*::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 99px;
+	@extend .bg-primary;
+}
+
+*::-webkit-scrollbar-corner {
+	opacity: 0;
 }
