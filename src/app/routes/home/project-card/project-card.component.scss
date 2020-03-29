@@ -1,0 +1,6 @@
+@import '../../../../styles/tailwind.scss';
+
+:host {
+	display: block;
+	@extend .w-64;
+}

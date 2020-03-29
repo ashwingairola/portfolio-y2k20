@@ -7,9 +7,10 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { MyWorkComponent } from './components/my-work/my-work.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 @NgModule({
-	declarations: [HomeComponent, BannerComponent, MyWorkComponent],
+	declarations: [HomeComponent, BannerComponent, MyWorkComponent, ProjectCardComponent],
 	imports: [
 		CommonModule,
 		HomeRoutingModule,
