@@ -11,7 +11,6 @@ import {
 } from '@angular/core';
 import Glide from '@glidejs/glide';
 import { SliderItemDirective } from '../../directives/slider-item.directive';
-import * as tailwindConfig from '@ag-tailwind-config';
 
 @Component({
 	selector: 'ag-slider',
@@ -27,9 +26,7 @@ export class SliderComponent
 
 	constructor(private renderer: Renderer2) {}
 
-	ngOnInit(): void {
-		console.log(tailwindConfig);
-	}
+	ngOnInit(): void {}
 
 	ngAfterViewInit(): void {
 		const glideObj = new Glide(this.glide.nativeElement, {
@@ -39,9 +36,12 @@ export class SliderComponent
 					perView: 1.5
 				},
 				768: {
-					perView: 3
+					perView: 2.5
 				},
 				1024: {
+					perView: 3
+				},
+				1280: {
 					perView: 4
 				}
 			}
