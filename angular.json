@@ -29,8 +29,7 @@
 						"assets": ["src/favicon.ico", "src/assets"],
 						"styles": [
 							"src/styles/styles.scss",
-							"node_modules/@glidejs/glide/dist/css/glide.core.min.css",
-							"node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+							"node_modules/@glidejs/glide/dist/css/glide.core.min.css"
 						],
 						"scripts": []
 					},
@@ -95,8 +94,7 @@
 						"assets": ["src/favicon.ico", "src/assets"],
 						"styles": [
 							"src/styles/styles.scss",
-							"node_modules/@glidejs/glide/dist/css/glide.core.min.css",
-							"node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+							"node_modules/@glidejs/glide/dist/css/glide.core.min.css"
 						],
 						"scripts": []
 					}
