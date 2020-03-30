@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { IconModule, ButtonModule, CardModule, SliderModule } from '@ag-modules';
+import {
+	IconModule,
+	ButtonModule,
+	CardModule,
+	SliderModule
+} from '@ag-modules';
+import { ProjectApiService } from '@ag-apis';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './components/home/home.component';
@@ -10,7 +16,12 @@ import { MyWorkComponent } from './components/my-work/my-work.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 
 @NgModule({
-	declarations: [HomeComponent, BannerComponent, MyWorkComponent, ProjectCardComponent],
+	declarations: [
+		HomeComponent,
+		BannerComponent,
+		MyWorkComponent,
+		ProjectCardComponent
+	],
 	imports: [
 		CommonModule,
 		HomeRoutingModule,
@@ -18,6 +29,7 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 		ButtonModule,
 		SliderModule,
 		CardModule
-	]
+	],
+	providers: [ProjectApiService]
 })
 export class HomeModule {}

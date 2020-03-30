@@ -1,11 +1,20 @@
 <ag-card>
-	<ag-card-image [src]="'assets/img/Lex.png'" [alt]="'Lex'"></ag-card-image>
+	<ag-card-image [src]="project.img" [alt]="project.title"></ag-card-image>
 
 	<section class="ag-text mt-2">
-		<p class="mb-1 truncate">Infosys Wingspan</p>
+		<div class="mb-1">
+			<p class="truncate">{{ project.title }}</p>
+			<p class="text-xs truncate">
+				<ng-container *ngIf="project.company">
+					{{ project.company }}
+				</ng-container>
+				<ng-container *ngIf="!project.company">
+					Personal Project
+				</ng-container>
+			</p>
+		</div>
 		<p class="ag-text text-xs">
-			Wingspan is a learning platform that is now used throughout Infosys Ltd.
-			to train its employees.
+			{{ project.description }}
 		</p>
 	</section>
 </ag-card>

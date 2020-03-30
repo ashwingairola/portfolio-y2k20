@@ -1,1 +1,1 @@
-export * from './project-api.service';
+export { ProjectApiService } from './project-api.service';
