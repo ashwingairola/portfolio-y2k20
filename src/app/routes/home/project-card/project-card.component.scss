@@ -3,4 +3,12 @@
 :host {
 	display: block;
 	@extend .w-64;
+	height: 320px;
+}
+
+.project-desc {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
 }

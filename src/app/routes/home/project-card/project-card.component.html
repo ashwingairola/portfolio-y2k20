@@ -1,7 +1,7 @@
 <ag-card>
 	<ag-card-image [src]="project.img" [alt]="project.title"></ag-card-image>
 
-	<section class="ag-text mt-2">
+	<section class="ag-text mt-2 h-full">
 		<div class="mb-1">
 			<p class="truncate">{{ project.title }}</p>
 			<p class="text-xs truncate">
@@ -13,7 +13,12 @@
 				</ng-container>
 			</p>
 		</div>
-		<p class="ag-text text-xs">
+		<p class="ag-text text-xs project-desc">
+			<!-- {{
+				project.description.length > 50
+					? (project.description | slice: 0:50) + '...'
+					: project.description
+            }} -->
 			{{ project.description }}
 		</p>
 	</section>
