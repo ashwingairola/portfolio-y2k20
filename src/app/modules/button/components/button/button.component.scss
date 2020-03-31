@@ -1,6 +1,17 @@
+@import '../../../../../styles/tailwind.scss';
+
 :host {
-	border-radius: 99px;
-	display: inline-block;
+	&.ag-button {
+		border-radius: 99px;
+		display: inline-block;
+	}
+
+	&.ag-round-button {
+		@extend .h-10;
+		@extend .w-10;
+		display: inline-block;
+		border-radius: 99px;
+	}
 
 	&:focus {
 		outline: none;
