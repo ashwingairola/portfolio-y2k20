@@ -9,8 +9,15 @@ import {
 } from '@angular/animations';
 import { ClickableComponent } from 'src/app/components/clickable/clickable.component';
 
+const BUTTON_HOST_ATTRIBUTES = ['ag-button', 'ag-round-button'];
+const BUTTON_ATTRIBUTE_CLASS_MAP: Map<string, string> = new Map([
+	['ag-button', 'ag-button'],
+	['ag-round-button', 'ag-round-button']
+]);
+
 @Component({
-	selector: 'button [agButton], a [agButton]',
+	selector:
+		'button [ag-button], a [ag-button], button [ag-round-button], a[ag-round-button]',
 	templateUrl: './button.component.html',
 	styleUrls: ['./button.component.scss'],
 	animations: [
@@ -51,6 +58,25 @@ export class ButtonComponent extends ClickableComponent implements OnInit {
 
 			default:
 				break;
+		}
+
+		this.decideButtonType();
+	}
+
+	private decideButtonType() {
+		const hasButtonAttribute = BUTTON_HOST_ATTRIBUTES.some(attr =>
+			this.hostElement.hasAttribute(attr)
+		);
+
+		if (hasButtonAttribute) {
+			const buttonAttribute = BUTTON_HOST_ATTRIBUTES.filter(attr =>
+				this.hostElement.hasAttribute(attr)
+			)[0];
+
+			this.renderer.addClass(
+				this.hostElement,
+				BUTTON_ATTRIBUTE_CLASS_MAP.get(buttonAttribute) || 'ag-button'
+			);
 		}
 	}
 }
