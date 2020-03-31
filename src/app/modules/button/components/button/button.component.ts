@@ -17,7 +17,7 @@ const BUTTON_ATTRIBUTE_CLASS_MAP: Map<string, string> = new Map([
 
 @Component({
 	selector:
-		'button [ag-button], a [ag-button], button [ag-round-button], a[ag-round-button]',
+		'button[ag-button], a[ag-button], button[ag-round-button], a[ag-round-button]',
 	templateUrl: './button.component.html',
 	styleUrls: ['./button.component.scss'],
 	animations: [
