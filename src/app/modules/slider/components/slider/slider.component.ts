@@ -7,7 +7,7 @@ import {
 	ContentChildren,
 	QueryList,
 	AfterContentInit,
-	Renderer2
+	Renderer2,
 } from '@angular/core';
 import Glide from '@glidejs/glide';
 import { SliderItemDirective } from '../../directives/slider-item.directive';
@@ -15,7 +15,7 @@ import { SliderItemDirective } from '../../directives/slider-item.directive';
 @Component({
 	selector: 'ag-slider',
 	templateUrl: './slider.component.html',
-	styleUrls: ['./slider.component.scss']
+	styleUrls: ['./slider.component.scss'],
 })
 export class SliderComponent
 	implements OnInit, AfterViewInit, AfterContentInit {
@@ -30,21 +30,21 @@ export class SliderComponent
 
 	ngAfterViewInit(): void {
 		const glideObj = new Glide(this.glide.nativeElement, {
-			perView: 5,
+			perView: 4,
 			breakpoints: {
 				640: {
-					perView: 1.5
+					perView: 1.5,
 				},
 				768: {
-					perView: 2.5
+					perView: 2.5,
 				},
 				1024: {
-					perView: 3
+					perView: 3,
 				},
 				1280: {
-					perView: 4
-				}
-			}
+					perView: 4,
+				},
+			},
 		});
 
 		glideObj.mount();
