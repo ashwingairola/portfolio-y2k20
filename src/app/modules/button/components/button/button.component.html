@@ -4,12 +4,12 @@
 	</div>
 
 	<div
-		class="bg-app-secondary absolute top-0 z-10 h-full w-full"
+		class="hover-overlay bg-app-secondary absolute top-0 z-10 h-full w-full"
 		[@showOnHover]="hovering ? 'hover' : '*'"
 	></div>
 
 	<div
-		class="bg-app-secondary absolute top-0 z-0 h-full w-full"
+		class="active-overlay bg-app-secondary absolute top-0 z-0 h-full w-full"
 		[@onActive]="clicked || touched ? 'active' : '*'"
 	></div>
 </div>
