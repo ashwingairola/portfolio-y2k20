@@ -14,13 +14,15 @@ import { HomeComponent } from './components/home/home.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { MyWorkComponent } from './components/my-work/my-work.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { BtnGithubComponent } from './components/btn-github/btn-github.component';
 
 @NgModule({
 	declarations: [
 		HomeComponent,
 		BannerComponent,
 		MyWorkComponent,
-		ProjectCardComponent
+		ProjectCardComponent,
+		BtnGithubComponent
 	],
 	imports: [
 		CommonModule,
