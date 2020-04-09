@@ -1,0 +1,26 @@
+[
+	{
+		"id": "1",
+		"title": "Infosys Wingspan",
+		"company": "Infosys Ltd.",
+		"description": "Wingspan is a learning platform that is now used throughout Infosys Ltd. to train its employees.",
+		"img": "assets/img/lex.png",
+		"liveUrl": "https://lex.infosysapps.com"
+	},
+	{
+		"id": "2",
+		"title": "InfyTQ",
+		"company": "Infosys Ltd.",
+		"description": "InfyTQ is a learning platform that is meant to prepare aspiring Infosys candidates to enter the organization.",
+		"img": "assets/img/infytq.png",
+		"liveUrl": "https://infytq.infosys.com"
+	},
+	{
+		"id": "3",
+		"title": "DDive",
+		"company": "orcablue.ai",
+		"description": "The next-generation data visualization and business intelligence platform.",
+		"img": "assets/img/ddive.png",
+		"liveUrl": "https://orcablue.ai/"
+	}
+]

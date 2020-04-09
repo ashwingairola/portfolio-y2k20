@@ -1,1 +1,13 @@
 <h2 class="ag-heading text-2xl sm:text-4xl">My Work</h2>
+
+<!-- <ag-project-card></ag-project-card> -->
+
+<ng-container *ngIf="projects">
+	<ag-slider>
+		<ag-project-card
+			agSliderItem
+			*ngFor="let project of projects"
+			[project]="project"
+		></ag-project-card>
+	</ag-slider>
+</ng-container>

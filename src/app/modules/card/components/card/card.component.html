@@ -1,9 +1,7 @@
 <section
-	class="bg-app-secondary ag-text rounded shadow p-3 flex flex-col justify-between"
+	class="card-container bg-app-secondary ag-text rounded shadow p-3 flex flex-col justify-between h-full"
 >
 	<ng-content select="ag-card-header"></ng-content>
-	<section>
-		<ng-content></ng-content>
-	</section>
+	<ng-content></ng-content>
 	<ng-content select="ag-card-footer"></ng-content>
 </section>
