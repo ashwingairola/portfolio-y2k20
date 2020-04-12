@@ -22,5 +22,14 @@
 		"description": "The next-generation data visualization and business intelligence platform.",
 		"img": "assets/img/ddive.png",
 		"liveUrl": "https://orcablue.ai/"
+	},
+	{
+		"id": "4",
+		"title": "My Portfolio, ca. 2020",
+		"company": "Personal project",
+		"description": "My portfolio website for the year 2020.",
+		"img": "assets/img/portfolio.png",
+		"liveUrl": "http://localhost:4200/",
+		"githubRepo": "ashwingairola/portfolio-y2k20"
 	}
 ]
