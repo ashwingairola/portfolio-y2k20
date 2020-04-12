@@ -14,12 +14,20 @@
 			</p>
 		</div>
 		<p class="ag-text text-xs project-desc">
-			<!-- {{
-				project.description.length > 50
-					? (project.description | slice: 0:50) + '...'
-					: project.description
-            }} -->
 			{{ project.description }}
 		</p>
 	</section>
+
+	<ag-card-footer>
+		<div class="-m-2">
+			<ag-btn-project-link
+				*ngIf="project.liveUrl"
+				[liveUrl]="project.liveUrl"
+			></ag-btn-project-link>
+			<ag-btn-github
+				*ngIf="project.githubRepo"
+				[githubRepo]="project.githubRepo"
+			></ag-btn-github>
+		</div>
+	</ag-card-footer>
 </ag-card>
