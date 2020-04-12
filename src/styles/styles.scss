@@ -1,7 +1,8 @@
 @import './reset.scss';
-@import './themes.scss';
 @import './tailwind.scss';
+@import './themes.scss';
 @import './typography.scss';
+@import './scrollbars.scss';
 
 .ag-heading {
 	@extend .ag-font-1;
@@ -25,20 +26,4 @@
 .ag-text-4 {
 	@extend .ag-text;
 	@extend .text-2xl;
-}
-
-// SCROLLBARS
-
-*::-webkit-scrollbar {
-	width: 6px;
-	height: 6px;
-}
-
-*::-webkit-scrollbar-thumb {
-	border-radius: 99px;
-	@extend .bg-primary;
-}
-
-*::-webkit-scrollbar-corner {
-	opacity: 0;
 }
