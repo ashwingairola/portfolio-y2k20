@@ -1,0 +1,17 @@
+@import './tailwind.scss';
+
+// SCROLLBARS
+
+*::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 99px;
+	@extend .bg-primary;
+}
+
+*::-webkit-scrollbar-corner {
+	opacity: 0;
+}
