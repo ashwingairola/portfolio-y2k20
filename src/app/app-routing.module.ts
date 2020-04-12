@@ -5,12 +5,12 @@ const routes: Routes = [
 	{
 		path: '',
 		loadChildren: () =>
-			import('./routes/home/home.module').then(u => u.HomeModule)
-	}
+			import('./routes/home/home.module').then(u => u.HomeModule),
+	},
 ];
 
 @NgModule({
 	imports: [RouterModule.forRoot(routes)],
-	exports: [RouterModule]
+	exports: [RouterModule],
 })
 export class AppRoutingModule {}
