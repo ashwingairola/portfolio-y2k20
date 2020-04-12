@@ -15,6 +15,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { MyWorkComponent } from './components/my-work/my-work.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { BtnGithubComponent } from './components/btn-github/btn-github.component';
+import { BtnProjectLinkComponent } from './components/btn-project-link/btn-project-link.component';
 
 @NgModule({
 	declarations: [
@@ -22,7 +23,8 @@ import { BtnGithubComponent } from './components/btn-github/btn-github.component
 		BannerComponent,
 		MyWorkComponent,
 		ProjectCardComponent,
-		BtnGithubComponent
+		BtnGithubComponent,
+		BtnProjectLinkComponent
 	],
 	imports: [
 		CommonModule,
