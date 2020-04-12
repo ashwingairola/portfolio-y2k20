@@ -21,10 +21,13 @@
 							"path": "./webpack.config.js"
 						},
 						"outputPath": "dist/portfolio-y2k20",
+						"baseHref": "/portfolio-y2k20/",
+						"deployUrl": "/portfolio-y2k20/",
 						"index": "src/index.html",
 						"main": "src/main.ts",
 						"polyfills": "src/polyfills.ts",
 						"tsConfig": "tsconfig.app.json",
+						"extractCss": true,
 						"aot": true,
 						"assets": ["src/favicon.ico", "src/assets"],
 						"styles": [
