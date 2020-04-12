@@ -1,9 +1,21 @@
 @import '../../../../styles/tailwind.scss';
 
 :host {
+	@screen lg {
+		height: 360px;
+	}
+
+	@screen md {
+		height: 340px;
+	}
+
+	@screen sm {
+		height: 320px;
+	}
+
 	display: block;
-	@extend .w-64;
-	height: 320px;
+	height: 300px;
+	margin-bottom: 4px;
 }
 
 .project-desc {
