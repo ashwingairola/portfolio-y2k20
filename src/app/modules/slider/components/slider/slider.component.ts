@@ -48,7 +48,7 @@ export class SliderComponent
 					perView: 5,
 				},
 				1920: {
-					perView: 5,
+					perView: 4,
 				},
 				2560: {
 					perView: 8,
