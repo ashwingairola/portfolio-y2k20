@@ -2,32 +2,8 @@
 
 :host {
 	display: block;
-	height: 360px;
+	height: inherit;
 	margin-bottom: 4px;
-}
-
-@screen sm {
-	:host {
-		height: 320px;
-	}
-}
-
-@screen md {
-	:host {
-		height: 320px;
-	}
-}
-
-@screen lg {
-	:host {
-		height: 340px;
-	}
-}
-
-@screen 4k {
-	:host {
-		height: 320px;
-	}
 }
 
 .project-desc {
