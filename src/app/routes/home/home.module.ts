@@ -5,9 +5,9 @@ import {
 	IconModule,
 	ButtonModule,
 	CardModule,
-	SliderModule
+	SliderModule,
 } from '@ag-modules';
-import { ProjectApiService } from '@ag-apis';
+import { ProjectApiService, SkillApiService } from '@ag-apis';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './components/home/home.component';
@@ -16,6 +16,8 @@ import { MyWorkComponent } from './components/my-work/my-work.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { BtnGithubComponent } from './components/btn-github/btn-github.component';
 import { BtnProjectLinkComponent } from './components/btn-project-link/btn-project-link.component';
+import { MySkillsComponent } from './components/my-skills/my-skills.component';
+import { SkillIconComponent } from './components/skill-icon/skill-icon.component';
 
 @NgModule({
 	declarations: [
@@ -24,7 +26,9 @@ import { BtnProjectLinkComponent } from './components/btn-project-link/btn-proje
 		MyWorkComponent,
 		ProjectCardComponent,
 		BtnGithubComponent,
-		BtnProjectLinkComponent
+		BtnProjectLinkComponent,
+		MySkillsComponent,
+		SkillIconComponent,
 	],
 	imports: [
 		CommonModule,
@@ -32,8 +36,8 @@ import { BtnProjectLinkComponent } from './components/btn-project-link/btn-proje
 		IconModule,
 		ButtonModule,
 		SliderModule,
-		CardModule
+		CardModule,
 	],
-	providers: [ProjectApiService]
+	providers: [ProjectApiService, SkillApiService],
 })
 export class HomeModule {}

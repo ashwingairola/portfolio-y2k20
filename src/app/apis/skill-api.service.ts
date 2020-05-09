@@ -3,15 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-import { Project } from '@ag-models';
+import { Skill } from '@ag-models';
 
 @Injectable()
-export class ProjectApiService {
+export class SkillApiService {
 	constructor(private http: HttpClient) {}
 
-	getProjects(): Observable<Project[]> {
+	getProjects(): Observable<Skill[]> {
 		return this.http
-			.get<Project[]>('assets/data/projects.json')
+			.get<Skill[]>('assets/data/skills.json')
 			.pipe(catchError(() => []));
 	}
 }

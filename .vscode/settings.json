@@ -1,8 +1,8 @@
 {
 	"editor.rulers": [80],
-    "editor.wordWrap": "on",
-    "editor.formatOnSave": true,
-    "javascript.format.enable": false,
+	"editor.wordWrap": "on",
+	"editor.formatOnSave": true,
+	"javascript.format.enable": false,
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
@@ -14,5 +14,9 @@
 	},
 	"[scss]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	}
+	},
+	"[xml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "python.pythonPath": "C:\\Users\\ACER\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe"
 }
