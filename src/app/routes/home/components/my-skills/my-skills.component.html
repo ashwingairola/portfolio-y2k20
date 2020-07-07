@@ -1,9 +1,11 @@
-<h2 class="ag-heading text-2xl sm:text-4xl">My Skills</h2>
+<h2 class="ag-heading text-2xl sm:text-4xl mb-4">My Skills</h2>
 
-<ng-container *ngIf="skills">
-	<ag-skill-icon
-		agSliderItem
-		*ngFor="let skill of skills"
-		[skill]="skill"
-	></ag-skill-icon>
-</ng-container>
+<section class="-ml-4 flex flex-wrap" *ngIf="skills">
+	<div class="mx-auto" *ngFor="let skill of skills">
+		<ag-skill-icon
+			class="ml-4 mt-2"
+			agSliderItem
+			[skill]="skill"
+		></ag-skill-icon>
+	</div>
+</section>

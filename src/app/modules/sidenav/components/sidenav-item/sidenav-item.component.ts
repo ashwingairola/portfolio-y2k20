@@ -26,7 +26,7 @@ import { ClickableComponent } from 'src/app/components/clickable/clickable.compo
 	]
 })
 export class SidenavItemComponent extends ClickableComponent {
-	constructor(elementRef: ElementRef) {
-		super(elementRef);
+	constructor() {
+		super();
 	}
 }

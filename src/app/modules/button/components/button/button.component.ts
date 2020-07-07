@@ -5,30 +5,31 @@ import {
 	state,
 	style,
 	transition,
-	animate
+	animate,
+	keyframes
 } from '@angular/animations';
 import { ClickableComponent } from 'src/app/components/clickable/clickable.component';
 
-const BUTTON_HOST_ATTRIBUTES = ['ag-button', 'ag-round-button'];
+const BUTTON_HOST_ATTRIBUTES = [
+	'ag-button',
+	'ag-round-button',
+	'ag-icon-button'
+];
 const BUTTON_ATTRIBUTE_CLASS_MAP: Map<string, string> = new Map([
 	['ag-button', 'ag-button'],
-	['ag-round-button', 'ag-round-button']
+	['ag-round-button', 'ag-round-button'],
+	['ag-icon-button', 'ag-icon-button']
 ]);
 
 @Component({
 	selector:
-		'button[ag-button], a[ag-button], button[ag-round-button], a[ag-round-button]',
+		'button[ag-button], a[ag-button], button[ag-round-button], a[ag-round-button], button[ag-icon-button], a[ag-icon-button]',
 	templateUrl: './button.component.html',
 	styleUrls: ['./button.component.scss'],
 	animations: [
-		trigger('showOnHover', [
-			state('*', style({ opacity: 0 })),
-			state('hover', style({ opacity: 0.5 })),
-			transition('* <=> hover', [animate('0.2s')])
-		]),
 		trigger('onActive', [
 			state('*', style({ opacity: 0 })),
-			state('active', style({ opacity: 0.7 })),
+			state('active', style({ opacity: 0.5 })),
 			transition('* <=> active', [animate('0.2s')])
 		])
 	]
@@ -38,7 +39,7 @@ export class ButtonComponent extends ClickableComponent implements OnInit {
 	hostElement: HTMLButtonElement | HTMLAnchorElement;
 
 	constructor(private elementRef: ElementRef, private renderer: Renderer2) {
-		super(elementRef);
+		super();
 
 		this.color = 'none';
 		this.hostElement = this.elementRef.nativeElement;

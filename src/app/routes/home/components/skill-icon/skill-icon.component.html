@@ -1,3 +1,42 @@
-<section class="h-32 w-32">
-	<img [src]="skill.logo" [alt]="skill.title" />
+<section class="hidden md:block flex flex-col justify-between">
+	<img
+		class="h-32 w-32 skill-icon inline-block"
+		[src]="skill.logo"
+		[alt]="skill.title"
+		onerror="this.onerror = null; this.src='http:\/\/cdn.onlinewebfonts.com/svg/img_161528.svg';"
+		(mouseenter)="hovering = true"
+		(mouseleave)="hovering = false"
+	/>
+	<div class="ag-text text-center mt-1" [@hovering]="hovering">
+		{{ skill.title }}
+		<div class="ag-text text-xs">
+			<ng-container
+				*ngTemplateOutlet="
+					skillLevelLabel;
+					context: { $implicit: skill.proficiency }
+				"
+			></ng-container>
+		</div>
+	</div>
 </section>
+
+<section class="block md:hidden flex flex-col justify-between">
+	<img
+		class="h-16 w-16 inline-block"
+		[src]="skill.logo"
+		[alt]="skill.title"
+		onerror="this.onerror = null; this.src='http:\/\/cdn.onlinewebfonts.com/svg/img_161528.svg';"
+	/>
+	<div class="ag-text text-xs text-center mt-1">
+		{{ skill.title }}
+	</div>
+</section>
+
+<ng-template #skillLevelLabel let-level>
+	<div [ngSwitch]="level">
+		<ng-container *ngSwitchCase="1">Beginner</ng-container>
+		<ng-container *ngSwitchCase="2">Experienced</ng-container>
+		<ng-container *ngSwitchCase="3">Expert</ng-container>
+		<ng-container *ngSwitchDefault>{{ level }}</ng-container>
+	</div>
+</ng-template>

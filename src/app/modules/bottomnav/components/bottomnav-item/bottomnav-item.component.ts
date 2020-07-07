@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { ClickableComponent } from 'src/app/components/clickable/clickable.component';
 import {
 	trigger,
@@ -26,9 +26,7 @@ import {
 	]
 })
 export class BottomnavItemComponent extends ClickableComponent {
-	constructor(elementRef: ElementRef) {
-		super(elementRef);
+	constructor() {
+		super();
 	}
-
-	ngOnInit(): void {}
 }

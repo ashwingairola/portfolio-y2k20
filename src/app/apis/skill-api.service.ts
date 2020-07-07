@@ -11,7 +11,7 @@ export class SkillApiService {
 
 	getProjects(): Observable<Skill[]> {
 		return this.http
-			.get<Skill[]>('assets/data/skills.json')
+			.get<Skill[]>('assets/data/skills/basics.json')
 			.pipe(catchError(() => []));
 	}
 }

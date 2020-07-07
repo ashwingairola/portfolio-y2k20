@@ -1,0 +1,8 @@
+[
+	{
+		"id": "webpack",
+		"title": "Webpack",
+		"proficiency": 2,
+		"logo": "assets/svg/webpack.svg"
+	}
+]
