@@ -6,7 +6,7 @@
 		"start": "ng s -o",
 		"start:prod": "ng s -o -c=production",
 		"start:https": "ng s -o --ssl true --ssl-cert server.crt --ssl-key server.key",
-		"build": "ng build",
+		"build": "ng build --prod",
 		"test": "ng test",
 		"lint": "ng lint",
 		"e2e": "ng e2e"
