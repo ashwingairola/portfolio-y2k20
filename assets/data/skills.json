@@ -1,0 +1,12 @@
+[
+	{
+		"id": 0,
+		"title": "JavaScript",
+		"logo": "assets/svg/javascript.svg"
+	},
+	{
+		"id": 1,
+		"title": "TypeScript",
+		"logo": "assets/svg/typescript.svg"
+	}
+]

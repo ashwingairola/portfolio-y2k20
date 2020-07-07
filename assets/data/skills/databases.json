@@ -1,0 +1,8 @@
+[
+	{
+		"id": "mongodb",
+		"title": "MongoDB",
+		"proficiency": 1,
+		"logo": "assets/svg/mongodb.svg"
+	}
+]
