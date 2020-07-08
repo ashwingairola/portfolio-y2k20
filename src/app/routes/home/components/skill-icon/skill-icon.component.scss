@@ -4,9 +4,10 @@
 
 .skill-icon {
 	filter: grayscale(1);
-	transition: 0.2s filter;
+	transition: 0.2s all;
 
 	&:hover {
 		filter: none;
+		transform: scale(1.05);
 	}
 }
