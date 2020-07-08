@@ -1,7 +1,10 @@
+import { NgModule } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { Router, Scroll } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 import {
 	SidenavModule,
@@ -30,4 +33,27 @@ import { MenuItemComponent } from './components/menu-item/menu-item.component';
 	providers: [],
 	bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+	// constructor(router: Router, viewportScroller: ViewportScroller) {
+	// 	viewportScroller.setOffset([0, 50]);
+	// 	router.events
+	// 		.pipe(filter(e => e instanceof Scroll))
+	// 		.subscribe((e: Scroll) => {
+	// 			console.log(e);
+	// 			if (e.anchor) {
+	// 				// anchor navigation
+	// 				/* setTimeout is the core line to solve the solution */
+	// 				setTimeout(() => {
+	// 					console.log('SCROLL');
+	// 					viewportScroller.scrollToAnchor(e.anchor || '');
+	// 				});
+	// 			} else if (e.position) {
+	// 				// backward navigation
+	// 				viewportScroller.scrollToPosition(e.position);
+	// 			} else {
+	// 				// forward navigation
+	// 				viewportScroller.scrollToPosition([0, 0]);
+	// 			}
+	// 		});
+	// }
+}

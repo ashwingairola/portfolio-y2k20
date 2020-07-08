@@ -1,49 +1,47 @@
-<section class="flex w-full fixed">
-	<section class="w-16 h-screen max-h-screen hidden sm:block">
-		<ag-sidenav>
-			<ag-sidenav-item [routerLink]="['']" fragment="banner">
-				<ag-menu-item [icon]="'fa-home'"></ag-menu-item>
-			</ag-sidenav-item>
-			<ag-sidenav-item [routerLink]="['']" fragment="my-work">
-				<ag-menu-item [icon]="'fa-code'"></ag-menu-item>
-			</ag-sidenav-item>
-			<ag-sidenav-item [routerLink]="['']" fragment="my-skills">
-				<ag-menu-item [icon]="'fa-palette'"></ag-menu-item>
-			</ag-sidenav-item>
-			<ag-sidenav-item [routerLink]="['']" fragment="contact">
-				<ag-menu-item [icon]="'fa-phone'"></ag-menu-item>
-			</ag-sidenav-item>
-			<ag-sidenav-item>
-				<ag-menu-item [icon]="'fa-file-alt'"></ag-menu-item>
-			</ag-sidenav-item>
-		</ag-sidenav>
-	</section>
+<section class="w-16 fixed h-screen max-h-screen hidden sm:block">
+	<ag-sidenav>
+		<ag-sidenav-item [routerLink]="['']" fragment="banner">
+			<ag-menu-item [icon]="'fa-home'"></ag-menu-item>
+		</ag-sidenav-item>
+		<ag-sidenav-item [routerLink]="['']" fragment="my-work">
+			<ag-menu-item [icon]="'fa-code'"></ag-menu-item>
+		</ag-sidenav-item>
+		<ag-sidenav-item [routerLink]="['']" fragment="my-skills">
+			<ag-menu-item [icon]="'fa-palette'"></ag-menu-item>
+		</ag-sidenav-item>
+		<ag-sidenav-item [routerLink]="['']" fragment="contact">
+			<ag-menu-item [icon]="'fa-phone'"></ag-menu-item>
+		</ag-sidenav-item>
+		<ag-sidenav-item>
+			<ag-menu-item [icon]="'fa-file-alt'"></ag-menu-item>
+		</ag-sidenav-item>
+	</ag-sidenav>
+</section>
 
-	<section class="block sm:hidden">
-		<ag-bottomnav>
-			<ag-bottomnav-item [routerLink]="['']" fragment="banner">
-				<ag-menu-item [icon]="'fa-home'"></ag-menu-item>
-			</ag-bottomnav-item>
-			<ag-bottomnav-item [routerLink]="['']" fragment="my-work">
-				<ag-menu-item [icon]="'fa-code'"></ag-menu-item>
-			</ag-bottomnav-item>
-			<ag-bottomnav-item [routerLink]="['']" fragment="my-skills">
-				<ag-menu-item [icon]="'fa-palette'"></ag-menu-item>
-			</ag-bottomnav-item>
-			<ag-bottomnav-item [routerLink]="['']" fragment="contact">
-				<ag-menu-item [icon]="'fa-phone'"></ag-menu-item>
-			</ag-bottomnav-item>
-			<ag-bottomnav-item>
-				<ag-menu-item [icon]="'fa-file-alt'"></ag-menu-item>
-			</ag-bottomnav-item>
-		</ag-bottomnav>
-	</section>
+<section class="block sm:hidden">
+	<ag-bottomnav>
+		<ag-bottomnav-item [routerLink]="['']" fragment="banner">
+			<ag-menu-item [icon]="'fa-home'"></ag-menu-item>
+		</ag-bottomnav-item>
+		<ag-bottomnav-item [routerLink]="['']" fragment="my-work">
+			<ag-menu-item [icon]="'fa-code'"></ag-menu-item>
+		</ag-bottomnav-item>
+		<ag-bottomnav-item [routerLink]="['']" fragment="my-skills">
+			<ag-menu-item [icon]="'fa-palette'"></ag-menu-item>
+		</ag-bottomnav-item>
+		<ag-bottomnav-item [routerLink]="['']" fragment="contact">
+			<ag-menu-item [icon]="'fa-phone'"></ag-menu-item>
+		</ag-bottomnav-item>
+		<ag-bottomnav-item>
+			<ag-menu-item [icon]="'fa-file-alt'"></ag-menu-item>
+		</ag-bottomnav-item>
+	</ag-bottomnav>
+</section>
 
-	<section
-		class="pb-16 sm:pb-0 p-8 flex-grow w-full h-screen overflow-auto overflow-y-scroll"
-	>
-		<section class="mx-auto">
-			<router-outlet></router-outlet>
-		</section>
+<section
+	class="pb-16 sm:pb-0 pt-4 sm:pt-8 px-4 sm:px-0 sm:pl-16 flex-grow w-full"
+>
+	<section class="mx-auto w-11/12">
+		<router-outlet></router-outlet>
 	</section>
 </section>
