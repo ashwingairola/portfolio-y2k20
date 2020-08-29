@@ -27,3 +27,8 @@
 	@extend .ag-text;
 	@extend .text-2xl;
 }
+
+.link {
+	text-decoration: underline;
+	cursor: pointer;
+}
