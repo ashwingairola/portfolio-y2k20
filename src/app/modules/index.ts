@@ -5,6 +5,7 @@ export { ButtonModule } from './button/button.module';
 export { IconModule } from './icon/icon.module';
 export { SliderModule } from './slider/slider.module';
 export { CardModule } from './card/card.module';
+export { HyperlinkModule } from './hyperlink/hyperlink.module';
 
 // Models
 export * from './models/color.model';
