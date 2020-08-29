@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LayoutModule } from '@angular/cdk/layout';
 
 import {
 	IconModule,
 	ButtonModule,
 	CardModule,
 	SliderModule,
+	HyperlinkModule
 } from '@ag-modules';
 import { ProjectApiService, SkillApiService } from '@ag-apis';
 
@@ -28,16 +30,18 @@ import { SkillIconComponent } from './components/skill-icon/skill-icon.component
 		BtnGithubComponent,
 		BtnProjectLinkComponent,
 		MySkillsComponent,
-		SkillIconComponent,
+		SkillIconComponent
 	],
 	imports: [
 		CommonModule,
+		LayoutModule,
 		HomeRoutingModule,
 		IconModule,
 		ButtonModule,
 		SliderModule,
 		CardModule,
+		HyperlinkModule
 	],
-	providers: [ProjectApiService, SkillApiService],
+	providers: [ProjectApiService, SkillApiService]
 })
 export class HomeModule {}
