@@ -20,6 +20,7 @@ import { BtnGithubComponent } from './components/btn-github/btn-github.component
 import { BtnProjectLinkComponent } from './components/btn-project-link/btn-project-link.component';
 import { MySkillsComponent } from './components/my-skills/my-skills.component';
 import { SkillIconComponent } from './components/skill-icon/skill-icon.component';
+import { HeroPicComponent } from './components/hero-pic/hero-pic.component';
 
 @NgModule({
 	declarations: [
@@ -30,7 +31,8 @@ import { SkillIconComponent } from './components/skill-icon/skill-icon.component
 		BtnGithubComponent,
 		BtnProjectLinkComponent,
 		MySkillsComponent,
-		SkillIconComponent
+		SkillIconComponent,
+		HeroPicComponent
 	],
 	imports: [
 		CommonModule,
