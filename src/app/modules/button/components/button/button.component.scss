@@ -10,6 +10,10 @@
 
 	&.ag-round-button,
 	&.ag-icon-button {
+		text-align: center;
+		display: inline-block;
+		vertical-align: middle;
+
 		@extend .h-10;
 		@extend .w-10;
 
