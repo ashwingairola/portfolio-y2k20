@@ -4,7 +4,7 @@ import {
 	Input,
 	AfterViewInit,
 	ElementRef,
-	Renderer2,
+	Renderer2
 } from '@angular/core';
 import {
 	faHome,
@@ -16,15 +16,19 @@ import {
 	faBriefcase,
 	faArrowLeft,
 	faArrowRight,
-	faLink,
+	faLink
 } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import {
+	faGithub,
+	faLinkedin,
+	faAngellist
+} from '@fortawesome/free-brands-svg-icons';
 import { ThemeColor } from 'src/app/modules/models/color.model';
 
 @Component({
 	selector: 'ag-icon',
 	templateUrl: './icon.component.html',
-	styleUrls: ['./icon.component.scss'],
+	styleUrls: ['./icon.component.scss']
 })
 export class IconComponent implements OnInit, AfterViewInit {
 	@Input() icon!: string;
@@ -45,6 +49,8 @@ export class IconComponent implements OnInit, AfterViewInit {
 
 	// Brand Icons
 	faGithub = faGithub;
+	faLinkedin = faLinkedin;
+	faAngellist = faAngellist;
 
 	constructor(private container: ElementRef, private renderer: Renderer2) {
 		this.iconSize = 'small';
