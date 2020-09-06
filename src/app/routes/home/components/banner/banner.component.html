@@ -1,42 +1,31 @@
-<div class="header-container" *ngIf="showLargeBanner">
-	<div class="w-full md:w-2/3">
+<div class="flex" *ngIf="showLargeHeroSection">
+	<div class="w-full xl:w-2/3">
 		<div class="ag-heading text-5xl md:text-6xl inline-block">
 			<span>Hi, I'm </span>
 			<span class="text-app-primary">Ashwin Gairola</span>
 		</div>
 
-		<div class="ag-text-4 sm:ag-text-4 font-bold mb-2">
+		<div class="ag-text-4 sm:ag-text-4 font-bold mb-8">
 			<span class="text-app-secondary">Web Developer</span> since 2018
 		</div>
 
-		<section class="my-8">
-			<p class="ag-text-2 justified">
-				Born and bred in hilly
-				<a
-					agExternalLink
-					color="secondary"
-					class="link"
-					href="https://en.wikipedia.org/wiki/Dehradun"
-				>
-					Dehradun</a
-				>, I now work in
-				<a
-					agExternalLink
-					color="secondary"
-					class="link"
-					href="https://en.wikipedia.org/wiki/Bangalore"
-				>
-					Bengaluru</a
-				>
-				as a developer. I am a versatile learner, with a desire to work with the
-				latest tech in the industry and grow as a developer. Currently on a
-				mission to conquer the <span class="text-app-secondary">MEAN</span> and
-				<span class="text-app-secondary">MERN</span> stacks. Welcome to my
-				portfolio.
-			</p>
+		<section class="my-8 ag-text-2">
+			<ng-container *ngTemplateOutlet="intro"></ng-container>
 		</section>
 
-		<div class="mt-4">
+		<section class="my-8 -mx-4">
+			<a class="mx-4" ag-icon-button agExternalLink href="{{ linkedInUrl }}">
+				<ag-icon [icon]="'fa-linkedin'" [iconSize]="'large'"></ag-icon>
+			</a>
+			<a class="mx-4" ag-icon-button agExternalLink href="{{ angelListUrl }}">
+				<ag-icon [icon]="'fa-angellist'" [iconSize]="'large'"></ag-icon>
+			</a>
+			<a class="mx-4" ag-icon-button agExternalLink href="{{ githubUrl }}">
+				<ag-icon [icon]="'fa-github'" [iconSize]="'large'"></ag-icon>
+			</a>
+		</section>
+
+		<div class="mt-8">
 			<a
 				ag-button
 				color="primary"
@@ -47,8 +36,73 @@
 			</a>
 		</div>
 	</div>
+	<div class="flex flex-col justify-center mx-auto" *ngIf="showHeroImage">
+		<ag-hero-pic [imgUrl]="'assets/img/ashwin.jpg'"></ag-hero-pic>
+	</div>
 </div>
 
-<div class="header-container text-center" *ngIf="!showLargeBanner">
-	<div class="ag-heading text-5xl"></div>
+<div *ngIf="!showLargeHeroSection">
+	<section class="text-center">
+		<div class="ag-heading text-4xl text-app-primary">
+			Ashwin Gairola
+		</div>
+
+		<div class="ag-text-2 font-bold mb-2">
+			<span class="text-app-secondary">Web Developer</span> since 2018
+		</div>
+	</section>
+
+	<section class="my-8 ag-text">
+		<ng-container *ngTemplateOutlet="intro"></ng-container>
+	</section>
+
+	<section class="my-8 text-center">
+		<a class="mx-2" ag-icon-button agExternalLink href="{{ linkedInUrl }}">
+			<ag-icon [icon]="'fa-linkedin'" [iconSize]="'medium'"></ag-icon>
+		</a>
+		<a class="mx-2" ag-icon-button agExternalLink href="{{ angelListUrl }}">
+			<ag-icon [icon]="'fa-angellist'" [iconSize]="'medium'"></ag-icon>
+		</a>
+		<a class="mx-2" ag-icon-button agExternalLink href="{{ githubUrl }}">
+			<ag-icon [icon]="'fa-github'" [iconSize]="'medium'"></ag-icon>
+		</a>
+	</section>
+
+	<section class="my-8 text-center">
+		<a
+			ag-button
+			color="primary"
+			href="{{ resumeUrl }}"
+			download="{{ resumeFilename }}"
+		>
+			Download Résumé
+		</a>
+	</section>
 </div>
+
+<ng-template #intro>
+	<p class="text-justify">
+		Born and bred in hilly
+		<a
+			agExternalLink
+			color="secondary"
+			class="link"
+			href="https://en.wikipedia.org/wiki/Dehradun"
+		>
+			Dehradun</a
+		>, I now work in
+		<a
+			agExternalLink
+			color="secondary"
+			class="link"
+			href="https://en.wikipedia.org/wiki/Bangalore"
+		>
+			Bengaluru</a
+		>
+		as a developer. I am a versatile learner, with a desire to work with the
+		latest tech in the industry and grow as a developer. Currently on a mission
+		to conquer the <span class="text-app-secondary">MEAN</span> and
+		<span class="text-app-secondary">MERN</span> stacks. Welcome to my
+		portfolio.
+	</p>
+</ng-template>
