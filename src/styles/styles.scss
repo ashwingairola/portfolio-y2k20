@@ -3,6 +3,7 @@
 @import './themes.scss';
 @import './typography.scss';
 @import './scrollbars.scss';
+@import './../../node_modules/@angular/cdk/overlay-prebuilt.css';
 
 .ag-heading {
 	@extend .ag-font-1;

@@ -6,6 +6,7 @@ export { IconModule } from './icon/icon.module';
 export { SliderModule } from './slider/slider.module';
 export { CardModule } from './card/card.module';
 export { HyperlinkModule } from './hyperlink/hyperlink.module';
+export { TooltipModule } from './tooltip/tooltip.module';
 
 // Models
 export * from './models/color.model';
