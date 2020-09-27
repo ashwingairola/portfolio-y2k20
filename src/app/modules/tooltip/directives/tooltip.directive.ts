@@ -59,11 +59,11 @@ export class TooltipDirective implements OnInit {
 	}
 
 	private getPositions() {
-		let positionStrategy: ConnectedPosition;
+		let position: ConnectedPosition;
 
 		switch (this.tooltipPosition) {
 			case 'right':
-				positionStrategy = {
+				position = {
 					originX: 'end',
 					originY: 'center',
 					overlayX: 'start',
@@ -72,10 +72,24 @@ export class TooltipDirective implements OnInit {
 				break;
 
 			case 'left':
+				position = {
+					originX: 'start',
+					originY: 'center',
+					overlayX: 'end',
+					overlayY: 'center'
+				};
+				break;
 			case 'bottom':
+				position = {
+					originX: 'center',
+					originY: 'bottom',
+					overlayX: 'center',
+					overlayY: 'top'
+				};
+				break;
 			case 'top':
 			default:
-				positionStrategy = {
+				position = {
 					originX: 'center',
 					originY: 'top',
 					overlayX: 'center',
@@ -83,6 +97,6 @@ export class TooltipDirective implements OnInit {
 				};
 		}
 
-		return positionStrategy;
+		return position;
 	}
 }
