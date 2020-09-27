@@ -7,7 +7,8 @@ import {
 	ButtonModule,
 	CardModule,
 	SliderModule,
-	HyperlinkModule
+	HyperlinkModule,
+	TooltipModule
 } from '@ag-modules';
 import { ProjectApiService, SkillApiService } from '@ag-apis';
 
@@ -42,7 +43,8 @@ import { HeroPicComponent } from './components/hero-pic/hero-pic.component';
 		ButtonModule,
 		SliderModule,
 		CardModule,
-		HyperlinkModule
+		HyperlinkModule,
+		TooltipModule
 	],
 	providers: [ProjectApiService, SkillApiService]
 })

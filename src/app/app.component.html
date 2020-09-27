@@ -1,18 +1,41 @@
 <section class="w-16 fixed h-screen max-h-screen hidden sm:block">
 	<ag-sidenav>
-		<ag-sidenav-item [routerLink]="['']" fragment="banner">
+		<ag-sidenav-item
+			agTooltip="Home"
+			tooltipPosition="right"
+			[routerLink]="['']"
+			fragment="banner"
+		>
 			<ag-menu-item [icon]="'fa-home'"></ag-menu-item>
 		</ag-sidenav-item>
-		<ag-sidenav-item [routerLink]="['']" fragment="my-work">
+		<ag-sidenav-item
+			agTooltip="My Work"
+			tooltipPosition="right"
+			[routerLink]="['']"
+			fragment="my-work"
+		>
 			<ag-menu-item [icon]="'fa-code'"></ag-menu-item>
 		</ag-sidenav-item>
-		<ag-sidenav-item [routerLink]="['']" fragment="my-skills">
+		<ag-sidenav-item
+			agTooltip="My Skills"
+			tooltipPosition="right"
+			[routerLink]="['']"
+			fragment="my-skills"
+		>
 			<ag-menu-item [icon]="'fa-palette'"></ag-menu-item>
 		</ag-sidenav-item>
-		<ag-sidenav-item [routerLink]="['']" fragment="contact">
+		<ag-sidenav-item
+			agTooltip="Contact Me (Under Construction)"
+			tooltipPosition="right"
+			[routerLink]="['']"
+			fragment="contact"
+		>
 			<ag-menu-item [icon]="'fa-phone'"></ag-menu-item>
 		</ag-sidenav-item>
-		<ag-sidenav-item>
+		<ag-sidenav-item
+			agTooltip="Download Resume (Under Construction)"
+			tooltipPosition="right"
+		>
 			<ag-menu-item [icon]="'fa-file-alt'"></ag-menu-item>
 		</ag-sidenav-item>
 	</ag-sidenav>
