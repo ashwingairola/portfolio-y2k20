@@ -31,5 +31,6 @@ export class ExternalLinkDirective implements OnInit {
 	private setTargetToExternal() {
 		const el = this.elementRef.nativeElement;
 		el.setAttribute('target', '_blank');
+		el.setAttribute('rel', 'noreferrer');
 	}
 }
