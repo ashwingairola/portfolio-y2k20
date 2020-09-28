@@ -1,0 +1,13 @@
+<h2 class="ag-heading text-2xl sm:text-4xl mb-8">Testimonials</h2>
+
+<section class="-ml-4 flex flex-wrap">
+	<ng-container *ngIf="testimonials | async as testes; else noTestimonials">
+		<div class="mx-auto" *ngFor="let testimonial of testes">
+			{{ testimonial.description }}
+		</div>
+	</ng-container>
+
+	<ng-template #noTestimonials>
+		<p *ngIf="error">Some error occurred.</p>
+	</ng-template>
+</section>

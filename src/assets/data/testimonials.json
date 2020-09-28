@@ -1,0 +1,11 @@
+[
+	{
+		"id": 1,
+		"author": {
+			"firstName": "A",
+			"middleName": "Swell",
+			"lastName": "Guy"
+		},
+		"description": "Ashwin is a swell dude, dude!"
+	}
+]

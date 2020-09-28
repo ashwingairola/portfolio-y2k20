@@ -10,9 +10,15 @@ import {
 	HyperlinkModule,
 	TooltipModule
 } from '@ag-modules';
-import { ProjectApiService, SkillApiService } from '@ag-apis';
+import {
+	ProjectApiService,
+	SkillApiService,
+	TestimonialApiService
+} from '@ag-apis';
 
 import { HomeRoutingModule } from './home-routing.module';
+import { TestimonialsModule } from './modules/testimonials/testimonials.module';
+
 import { HomeComponent } from './components/home/home.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { MyWorkComponent } from './components/my-work/my-work.component';
@@ -39,6 +45,7 @@ import { HeroPicComponent } from './components/hero-pic/hero-pic.component';
 		CommonModule,
 		LayoutModule,
 		HomeRoutingModule,
+		TestimonialsModule,
 		IconModule,
 		ButtonModule,
 		SliderModule,
@@ -46,6 +53,6 @@ import { HeroPicComponent } from './components/hero-pic/hero-pic.component';
 		HyperlinkModule,
 		TooltipModule
 	],
-	providers: [ProjectApiService, SkillApiService]
+	providers: [ProjectApiService, SkillApiService, TestimonialApiService]
 })
 export class HomeModule {}
