@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-import { shareReplay, takeUntil } from 'rxjs/operators';
-import { DOCUMENT } from '@angular/common';
+import { takeUntil } from 'rxjs/operators';
+
 import { Testimonial } from '@ag-models';
-import { TestimonialApiService } from '@ag-apis';
 
 @Component({
 	selector: 'ag-home',
@@ -17,8 +17,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 	constructor(
 		private route: ActivatedRoute,
-		@Inject(DOCUMENT) private document: Document,
-		private testimonialsApi: TestimonialApiService
+		@Inject(DOCUMENT) private document: Document
 	) {
 		this.componentDestroyed = new Subject();
 	}
@@ -30,10 +29,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 				const element = this.document.querySelector('#' + fragment);
 				element?.scrollIntoView();
 			});
-
-		this.testimonials$ = this.testimonialsApi
-			.getTestimonials()
-			.pipe(shareReplay(1));
 	}
 
 	ngOnDestroy(): void {
