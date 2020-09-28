@@ -26,7 +26,7 @@ export class TooltipDirective implements OnInit, OnDestroy {
 	@Input() tooltipPosition: TooltipPosition = 'top';
 
 	private overlayRef?: OverlayRef;
-	private componentPortal?: ComponentPortal<TooltipComponent>;
+	private tooltipPortal?: ComponentPortal<TooltipComponent>;
 
 	constructor(
 		private elementRef: ElementRef,
@@ -42,6 +42,8 @@ export class TooltipDirective implements OnInit, OnDestroy {
 			.withPositions([positions]);
 
 		this.overlayRef = this.overlay.create({ positionStrategy });
+
+		this.tooltipPortal = new ComponentPortal(TooltipComponent);
 	}
 
 	ngOnDestroy() {
@@ -50,8 +52,7 @@ export class TooltipDirective implements OnInit, OnDestroy {
 
 	@HostListener('mouseenter')
 	show() {
-		const tooltipPortal = new ComponentPortal(TooltipComponent);
-		const tooltipRef = this.overlayRef?.attach(tooltipPortal);
+		const tooltipRef = this.overlayRef?.attach(this.tooltipPortal);
 
 		if (tooltipRef) {
 			tooltipRef.instance.text = this.agTooltip;
