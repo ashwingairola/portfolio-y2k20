@@ -11,8 +11,10 @@ import {
 	TooltipModule
 } from '@ag-modules';
 
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeModule } from './routes/home/home.module';
+
+import { AppComponent } from './app.component';
 import { ClickableComponent } from './components/clickable/clickable.component';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
 
@@ -23,6 +25,7 @@ import { MenuItemComponent } from './components/menu-item/menu-item.component';
 		BrowserAnimationsModule,
 		HttpClientModule,
 		AppRoutingModule,
+		HomeModule,
 		SidenavModule,
 		BottomnavModule,
 		IconModule,
