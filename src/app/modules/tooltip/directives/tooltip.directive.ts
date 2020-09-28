@@ -3,7 +3,8 @@ import {
 	HostListener,
 	Input,
 	OnInit,
-	ElementRef
+	ElementRef,
+	OnDestroy
 } from '@angular/core';
 import { ComponentPortal } from '@angular/cdk/portal';
 import {
@@ -20,7 +21,7 @@ type TooltipPosition = 'left' | 'right' | 'bottom' | 'top';
 @Directive({
 	selector: '[agTooltip]'
 })
-export class TooltipDirective implements OnInit {
+export class TooltipDirective implements OnInit, OnDestroy {
 	@Input() agTooltip!: string;
 	@Input() tooltipPosition: TooltipPosition = 'top';
 
@@ -41,6 +42,10 @@ export class TooltipDirective implements OnInit {
 			.withPositions([positions]);
 
 		this.overlayRef = this.overlay.create({ positionStrategy });
+	}
+
+	ngOnDestroy() {
+		this.overlayRef?.dispose();
 	}
 
 	@HostListener('mouseenter')
