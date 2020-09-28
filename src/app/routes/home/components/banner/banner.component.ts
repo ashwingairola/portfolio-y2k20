@@ -41,7 +41,6 @@ export class BannerComponent implements OnInit, OnDestroy {
 			.observe([BREAKPOINTS.tablet, BREAKPOINTS.desktop])
 			.pipe(takeUntil(this.unsubscribeSubject))
 			.subscribe(breakpointState => {
-				console.log(breakpointState);
 				const breakpoints = breakpointState.breakpoints;
 
 				// Show or hide the large hero section.
