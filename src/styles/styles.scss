@@ -5,28 +5,12 @@
 @import './scrollbars.scss';
 @import './../../node_modules/@angular/cdk/overlay-prebuilt.css';
 
+body {
+	font-family: 'Raleway', 'Segoe UI', 'Ubuntu', sans-serif;
+}
+
 .ag-heading {
-	@extend .ag-font-1;
-}
-
-.ag-text {
-	@extend .ag-font-2;
-	@extend .font-normal;
-}
-
-.ag-text-2 {
-	@extend .ag-text;
-	@extend .text-lg;
-}
-
-.ag-text-3 {
-	@extend .ag-text;
-	@extend .text-xl;
-}
-
-.ag-text-4 {
-	@extend .ag-text;
-	@extend .text-2xl;
+	font-family: 'Heebo', 'Segoe UI', 'Ubuntu', sans-serif;
 }
 
 .link {

@@ -1,37 +1,48 @@
 @font-face {
-	font-family: 'Russo One';
-	src: url('../assets/fonts/RussoOne-Regular.ttf');
+	font-family: 'Heebo';
+	src: url('~/assets/fonts/Heebo-Black.ttf');
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Caviar Dreams';
-	src: url('../assets/fonts/CaviarDreams-webfont.woff');
+	font-family: 'Raleway';
+	src: url('~/assets/fonts/Raleway-Regular.ttf');
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Caviar Dreams';
-	src: url('../assets/fonts/CaviarDreams_Italic-webfont.woff');
+	font-family: 'Raleway';
+	src: url('~/assets/fonts/Raleway-Italic.ttf');
 	font-style: italic;
-	font-weight: 300;
+	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Caviar Dreams';
-	src: url('../assets/fonts/Caviar_Dreams_Bold-webfont.woff');
+	font-family: 'Raleway';
+	src: url('~/assets/fonts/Raleway-Bold.ttf');
 	font-style: normal;
 	font-weight: 700;
 	font-display: swap;
 }
 
-.ag-font-1 {
-	font-family: 'Russo One', sans-serif;
+.ag-text {
+	@extend .font-normal;
 }
 
-.ag-font-2 {
-	font-family: 'Caviar Dreams', sans-serif;
+.ag-text-2 {
+	@extend .ag-text;
+	@extend .text-lg;
+}
+
+.ag-text-3 {
+	@extend .ag-text;
+	@extend .text-xl;
+}
+
+.ag-text-4 {
+	@extend .ag-text;
+	@extend .text-2xl;
 }
