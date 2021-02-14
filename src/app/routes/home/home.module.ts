@@ -16,21 +16,18 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { MyWorkComponent } from './components/my-work/my-work.component';
-import { ProjectCardComponent } from './project-card/project-card.component';
-import { BtnGithubComponent } from './components/btn-github/btn-github.component';
-import { BtnProjectLinkComponent } from './components/btn-project-link/btn-project-link.component';
+// import { ProjectCardComponent } from './project-card/project-card.component';
 import { MySkillsComponent } from './components/my-skills/my-skills.component';
 import { SkillIconComponent } from './components/skill-icon/skill-icon.component';
 import { HeroPicComponent } from './components/hero-pic/hero-pic.component';
+import { ProjectsCommonsModule } from 'src/app/modules/common/projects-commons/projects-commons.module';
 
 @NgModule({
 	declarations: [
 		HomeComponent,
 		BannerComponent,
 		MyWorkComponent,
-		ProjectCardComponent,
-		BtnGithubComponent,
-		BtnProjectLinkComponent,
+		// ProjectCardComponent,
 		MySkillsComponent,
 		SkillIconComponent,
 		HeroPicComponent
@@ -44,7 +41,8 @@ import { HeroPicComponent } from './components/hero-pic/hero-pic.component';
 		SliderModule,
 		CardModule,
 		HyperlinkModule,
-		TooltipModule
+		TooltipModule,
+		ProjectsCommonsModule
 	],
 	providers: [ProjectApiService, SkillApiService]
 })

@@ -1,1 +1,29 @@
-<p>projects works!</p>
+<section>
+	<h1 class="text-4xl ag-heading mb-8 text-app-primary">Projects</h1>
+
+	<ng-container *ngIf="projects$ | async as projects; else loading">
+		<ng-container *ngIf="projects?.data && !projects?.error; else error">
+			<div
+				class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2"
+			>
+				<ag-project-card
+					*ngFor="let project of projects.data"
+					[project]="project"
+				></ag-project-card>
+			</div>
+		</ng-container>
+
+		<ng-template #error>
+			<p>There was an error while fetching projects.</p>
+		</ng-template>
+	</ng-container>
+
+	<ng-template #loading>
+		<div
+			class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2"
+			[ngStyle]="{ 'grid-auto-rows': '19rem' }"
+		>
+			<ag-card *agRepeat="8"></ag-card>
+		</div>
+	</ng-template>
+</section>

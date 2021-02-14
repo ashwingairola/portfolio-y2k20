@@ -1,1 +1,13 @@
-<p>project-details works!</p>
+<ng-container *ngIf="project$ | async as project; else loading">
+	<ng-container *ngIf="project?.data && !project?.error; else error">
+		<code>{{ project?.data | json }}</code>
+	</ng-container>
+
+	<ng-template #error>
+		<p>There was an error while fetching the project's details.</p>
+	</ng-template>
+</ng-container>
+
+<ng-template #loading>
+	<p class="mx-auto">Loading project details...</p>
+</ng-template>

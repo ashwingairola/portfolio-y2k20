@@ -31,5 +31,23 @@
 		"img": "assets/img/portfolio.png",
 		"liveUrl": "http://localhost:4200/",
 		"githubRepo": "ashwingairola/portfolio-y2k20"
+	},
+	{
+		"id": "5",
+		"title": "Some other project",
+		"company": "Personal project",
+		"description": "My portfolio website for the year 2020.",
+		"img": "assets/img/portfolio.png",
+		"liveUrl": "http://localhost:4200/",
+		"githubRepo": "ashwingairola/portfolio-y2k20"
+	},
+	{
+		"id": "6",
+		"title": "My Portfolio, ca. 2020",
+		"company": "Personal project",
+		"description": "My portfolio website for the year 2020.",
+		"img": "assets/img/portfolio.png",
+		"liveUrl": "http://localhost:4200/",
+		"githubRepo": "ashwingairola/portfolio-y2k20"
 	}
 ]

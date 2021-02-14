@@ -1,0 +1,36 @@
+<ag-card>
+	<ag-card-image [src]="project.img" [alt]="project.title"></ag-card-image>
+
+	<section class="mt-2 h-full">
+		<div class="mb-1">
+			<div class="truncate">
+				<strong>{{ project.title }}</strong>
+			</div>
+			<p class="text-xs truncate">
+				<ng-container *ngIf="project.company">
+					{{ project.company }}
+				</ng-container>
+				<ng-container *ngIf="!project.company">
+					Personal Project
+				</ng-container>
+			</p>
+		</div>
+		<p class="text-xs project-desc">
+			{{ project.description }}
+		</p>
+	</section>
+
+	<ag-card-footer>
+		<a
+			ag-icon-button
+			[href]="project.liveUrl"
+			class="mr-3"
+			*ngIf="project.liveUrl"
+		>
+			<ag-icon [icon]="'fa-link'"></ag-icon>
+		</a>
+		<a ag-icon-button [href]="project.githubRepo" *ngIf="project.githubRepo">
+			<ag-icon [icon]="'fa-github'" [iconSize]="'medium'"></ag-icon>
+		</a>
+	</ag-card-footer>
+</ag-card>
