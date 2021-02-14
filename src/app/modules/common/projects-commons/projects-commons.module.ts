@@ -6,6 +6,7 @@ import { BtnProjectLinkComponent } from './components/btn-project-link/btn-proje
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { CardModule } from '../../card/card.module';
 import { IconModule } from '../../icon/icon.module';
+import { HyperlinkModule } from '../../hyperlink/hyperlink.module';
 
 @NgModule({
 	declarations: [
@@ -13,7 +14,7 @@ import { IconModule } from '../../icon/icon.module';
 		BtnProjectLinkComponent,
 		ProjectCardComponent
 	],
-	imports: [CommonModule, CardModule, IconModule],
+	imports: [CommonModule, CardModule, IconModule, HyperlinkModule],
 	exports: [ProjectCardComponent]
 })
 export class ProjectsCommonsModule {}

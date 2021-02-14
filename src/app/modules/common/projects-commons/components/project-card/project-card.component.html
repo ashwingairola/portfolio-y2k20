@@ -23,13 +23,19 @@
 	<ag-card-footer>
 		<a
 			ag-icon-button
+			agExternalLink
 			[href]="project.liveUrl"
 			class="mr-3"
 			*ngIf="project.liveUrl"
 		>
 			<ag-icon [icon]="'fa-link'"></ag-icon>
 		</a>
-		<a ag-icon-button [href]="project.githubRepo" *ngIf="project.githubRepo">
+		<a
+			ag-icon-button
+			agExternalLink
+			[href]="project.githubRepo"
+			*ngIf="project.githubRepo"
+		>
 			<ag-icon [icon]="'fa-github'" [iconSize]="'medium'"></ag-icon>
 		</a>
 	</ag-card-footer>
