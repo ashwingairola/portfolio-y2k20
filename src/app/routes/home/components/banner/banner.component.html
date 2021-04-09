@@ -1,49 +1,93 @@
-<div class="flex" *ngIf="showLargeHeroSection">
-	<div class="w-full xl:w-2/3">
-		<div class="ag-heading text-5xl md:text-6xl inline-block">
-			<span>Hi, I'm </span>
-			<span class="text-app-primary">Ashwin Gairola</span>
+<section class="h-screen flex flex-col justify-between">
+	<div class="flex mt-10" *ngIf="showLargeHeroSection">
+		<section class="w-full xl:w-2/3">
+			<h1 class="ag-heading text-5xl md:text-6xl inline-block">
+				<span>Hi, I'm </span>
+				<span class="text-app-primary">Ashwin Gairola</span>
+			</h1>
+
+			<div class="ag-text-4 sm:ag-text-4 font-bold mb-8">
+				<span class="text-app-secondary">Web Developer</span> since 2018
+			</div>
+
+			<section class="my-8 ag-text-2">
+				<ng-container *ngTemplateOutlet="intro"></ng-container>
+			</section>
+
+			<div class="my-8 -mx-4">
+				<a
+					class="mx-4"
+					ag-icon-button
+					agTooltip="LinkedIn"
+					agExternalLink
+					href="{{ linkedInUrl }}"
+				>
+					<ag-icon [icon]="'fa-linkedin'" [iconSize]="'large'"></ag-icon>
+				</a>
+				<a
+					class="mx-4"
+					ag-icon-button
+					agTooltip="AngelList"
+					agExternalLink
+					href="{{ angelListUrl }}"
+				>
+					<ag-icon [icon]="'fa-angellist'" [iconSize]="'large'"></ag-icon>
+				</a>
+				<a
+					class="mx-4"
+					ag-icon-button
+					agTooltip="GitHub"
+					agExternalLink
+					href="{{ githubUrl }}"
+				>
+					<ag-icon [icon]="'fa-github'" [iconSize]="'large'"></ag-icon>
+				</a>
+			</div>
+
+			<div class="mt-8">
+				<a
+					ag-button
+					color="primary"
+					href="{{ resumeUrl }}"
+					download="{{ resumeFilename }}"
+				>
+					Download Résumé
+				</a>
+			</div>
+		</section>
+		<div class="flex flex-col justify-center mx-auto" *ngIf="showHeroImage">
+			<ag-hero-pic [imgUrl]="'assets/img/ashwin.jpg'"></ag-hero-pic>
+		</div>
+	</div>
+
+	<section *ngIf="!showLargeHeroSection">
+		<div class="text-center mt-8">
+			<h1 class="ag-heading text-4xl text-app-primary">
+				Ashwin Gairola
+			</h1>
+
+			<div class="ag-text-2 font-bold mb-2">
+				<span class="text-app-secondary">Web Developer</span> since 2018
+			</div>
 		</div>
 
-		<div class="ag-text-4 sm:ag-text-4 font-bold mb-8">
-			<span class="text-app-secondary">Web Developer</span> since 2018
-		</div>
-
-		<section class="my-8 ag-text-2">
+		<section class="my-8 ag-text">
 			<ng-container *ngTemplateOutlet="intro"></ng-container>
 		</section>
 
-		<section class="my-8 -mx-4">
-			<a
-				class="mx-4"
-				ag-icon-button
-				agTooltip="LinkedIn"
-				agExternalLink
-				href="{{ linkedInUrl }}"
-			>
-				<ag-icon [icon]="'fa-linkedin'" [iconSize]="'large'"></ag-icon>
+		<section class="my-8 text-center">
+			<a class="mx-2" ag-icon-button agExternalLink href="{{ linkedInUrl }}">
+				<ag-icon [icon]="'fa-linkedin'" [iconSize]="'medium'"></ag-icon>
 			</a>
-			<a
-				class="mx-4"
-				ag-icon-button
-				agTooltip="AngelList"
-				agExternalLink
-				href="{{ angelListUrl }}"
-			>
-				<ag-icon [icon]="'fa-angellist'" [iconSize]="'large'"></ag-icon>
+			<a class="mx-2" ag-icon-button agExternalLink href="{{ angelListUrl }}">
+				<ag-icon [icon]="'fa-angellist'" [iconSize]="'medium'"></ag-icon>
 			</a>
-			<a
-				class="mx-4"
-				ag-icon-button
-				agTooltip="GitHub"
-				agExternalLink
-				href="{{ githubUrl }}"
-			>
-				<ag-icon [icon]="'fa-github'" [iconSize]="'large'"></ag-icon>
+			<a class="mx-2" ag-icon-button agExternalLink href="{{ githubUrl }}">
+				<ag-icon [icon]="'fa-github'" [iconSize]="'medium'"></ag-icon>
 			</a>
 		</section>
 
-		<div class="mt-8">
+		<section class="my-8 text-center">
 			<a
 				ag-button
 				color="primary"
@@ -52,54 +96,24 @@
 			>
 				Download Résumé
 			</a>
-		</div>
-	</div>
-	<div class="flex flex-col justify-center mx-auto" *ngIf="showHeroImage">
-		<ag-hero-pic [imgUrl]="'assets/img/ashwin.jpg'"></ag-hero-pic>
-	</div>
-</div>
-
-<div *ngIf="!showLargeHeroSection">
-	<section class="text-center">
-		<div class="ag-heading text-4xl text-app-primary">
-			Ashwin Gairola
-		</div>
-
-		<div class="ag-text-2 font-bold mb-2">
-			<span class="text-app-secondary">Web Developer</span> since 2018
-		</div>
+		</section>
 	</section>
 
-	<section class="my-8 ag-text">
-		<ng-container *ngTemplateOutlet="intro"></ng-container>
-	</section>
-
-	<section class="my-8 text-center">
-		<a class="mx-2" ag-icon-button agExternalLink href="{{ linkedInUrl }}">
-			<ag-icon [icon]="'fa-linkedin'" [iconSize]="'medium'"></ag-icon>
-		</a>
-		<a class="mx-2" ag-icon-button agExternalLink href="{{ angelListUrl }}">
-			<ag-icon [icon]="'fa-angellist'" [iconSize]="'medium'"></ag-icon>
-		</a>
-		<a class="mx-2" ag-icon-button agExternalLink href="{{ githubUrl }}">
-			<ag-icon [icon]="'fa-github'" [iconSize]="'medium'"></ag-icon>
-		</a>
-	</section>
-
-	<section class="my-8 text-center">
+	<div class="text-center mb-16 sm:mb-10">
+		<div><small>SEE MORE</small></div>
 		<a
-			ag-button
-			color="primary"
-			href="{{ resumeUrl }}"
-			download="{{ resumeFilename }}"
+			ag-icon-button
+			class="bouncing-btn"
+			[routerLink]="['']"
+			fragment="my-work"
 		>
-			Download Résumé
+			<ag-icon [icon]="'fa-angle-double-down'" [iconSize]="'medium'"></ag-icon>
 		</a>
-	</section>
-</div>
+	</div>
+</section>
 
 <ng-template #intro>
-	<p class="text-justify">
+	<p class="text-justify mb-4">
 		Born and bred in hilly
 		<a
 			agTooltip="Dehradun, Uttarakhand, India"
@@ -124,5 +138,11 @@
 		to conquer the <span class="text-app-secondary">MEAN</span> and
 		<span class="text-app-secondary">MERN</span> stacks. Welcome to my
 		portfolio.
+	</p>
+
+	<p class="text-justify mb-4">
+		I am currently back home in Dehradun, not only because of the COVID-19
+		pandemic, but also to take care of my retired parents. I would, therefore,
+		prefer to work remotely.
 	</p>
 </ng-template>

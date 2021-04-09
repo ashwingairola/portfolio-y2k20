@@ -16,7 +16,8 @@ import {
 	faBriefcase,
 	faArrowLeft,
 	faArrowRight,
-	faLink
+	faLink,
+	faAngleDoubleDown
 } from '@fortawesome/free-solid-svg-icons';
 import {
 	faGithub,
@@ -46,6 +47,7 @@ export class IconComponent implements OnInit, AfterViewInit {
 	faArrowLeft = faArrowLeft;
 	faArrowRight = faArrowRight;
 	faLink = faLink;
+	faAngleDoubleDown = faAngleDoubleDown;
 
 	// Brand Icons
 	faGithub = faGithub;

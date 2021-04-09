@@ -1,0 +1,13 @@
+.bouncing-btn {
+	animation: 1s ease-in-out infinite alternate bounce;
+}
+
+@keyframes bounce {
+	from {
+		transform: translateY(-10%);
+	}
+
+	to {
+		transform: translateY(10%);
+	}
+}
