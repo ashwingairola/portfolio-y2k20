@@ -1,64 +1,54 @@
 <section class="w-16 fixed h-screen max-h-screen hidden sm:block">
 	<ag-sidenav>
-		<ag-sidenav-item
+		<a
+			class="h-16"
+			ag-sidenav-item
 			agTooltip="Home"
 			tooltipPosition="right"
 			[routerLink]="['']"
-			fragment="banner"
 		>
 			<ag-menu-item [icon]="'fa-home'"></ag-menu-item>
-		</ag-sidenav-item>
-		<ag-sidenav-item
+		</a>
+		<a
+			class="h-16"
+			ag-sidenav-item
 			agTooltip="My Work"
 			tooltipPosition="right"
-			[routerLink]="['']"
-			fragment="my-work"
+			[routerLink]="'projects'"
 		>
 			<ag-menu-item [icon]="'fa-code'"></ag-menu-item>
-		</ag-sidenav-item>
-		<ag-sidenav-item
+		</a>
+		<a
+			class="h-16"
+			ag-sidenav-item
 			agTooltip="My Skills"
 			tooltipPosition="right"
 			[routerLink]="['']"
 			fragment="my-skills"
 		>
 			<ag-menu-item [icon]="'fa-palette'"></ag-menu-item>
-		</ag-sidenav-item>
-		<ag-sidenav-item
+		</a>
+		<a
+			class="h-16"
+			ag-sidenav-item
 			agTooltip="Contact Me (Under Construction)"
 			tooltipPosition="right"
 			[routerLink]="['']"
 			fragment="contact"
 		>
 			<ag-menu-item [icon]="'fa-phone'"></ag-menu-item>
-		</ag-sidenav-item>
-		<ag-sidenav-item
-			agTooltip="Download Resume (Under Construction)"
+		</a>
+		<a
+			ag-sidenav-item
+			class="h-16"
+			href="{{ resumeUrl }}"
+			download="{{ resumeFilename }}"
+			agTooltip="Download Resume"
 			tooltipPosition="right"
 		>
 			<ag-menu-item [icon]="'fa-file-alt'"></ag-menu-item>
-		</ag-sidenav-item>
+		</a>
 	</ag-sidenav>
-</section>
-
-<section class="block sm:hidden">
-	<ag-bottomnav>
-		<ag-bottomnav-item [routerLink]="['']" fragment="banner">
-			<ag-menu-item [icon]="'fa-home'"></ag-menu-item>
-		</ag-bottomnav-item>
-		<ag-bottomnav-item [routerLink]="['']" fragment="my-work">
-			<ag-menu-item [icon]="'fa-code'"></ag-menu-item>
-		</ag-bottomnav-item>
-		<ag-bottomnav-item [routerLink]="['']" fragment="my-skills">
-			<ag-menu-item [icon]="'fa-palette'"></ag-menu-item>
-		</ag-bottomnav-item>
-		<ag-bottomnav-item [routerLink]="['']" fragment="contact">
-			<ag-menu-item [icon]="'fa-phone'"></ag-menu-item>
-		</ag-bottomnav-item>
-		<ag-bottomnav-item>
-			<ag-menu-item [icon]="'fa-file-alt'"></ag-menu-item>
-		</ag-bottomnav-item>
-	</ag-bottomnav>
 </section>
 
 <section class="pb-16 sm:pb-0 px-4 sm:px-0 sm:pl-16 flex-grow w-full">
@@ -66,4 +56,35 @@
 		<div *ngIf="showLoader">LOADING...</div>
 		<router-outlet></router-outlet>
 	</main>
+</section>
+
+<section class="block sm:hidden h-16">
+	<ag-bottomnav>
+		<a ag-bottomnav-item class="h-16 w-16" [routerLink]="['']">
+			<ag-menu-item [icon]="'fa-home'" iconSize="'small'"></ag-menu-item>
+		</a>
+		<a ag-bottomnav-item class="h-16 w-16" [routerLink]="['projects']">
+			<ag-menu-item [icon]="'fa-code'" iconSize="'small'"></ag-menu-item>
+		</a>
+		<a
+			ag-bottomnav-item
+			class="h-16 w-16"
+			[routerLink]="['']"
+			fragment="my-skills"
+			iconSize="'small'"
+		>
+			<ag-menu-item [icon]="'fa-palette'" iconSize="'small'"></ag-menu-item>
+		</a>
+		<a
+			ag-bottomnav-item
+			class="h-16 w-16"
+			[routerLink]="['']"
+			fragment="contact"
+		>
+			<ag-menu-item [icon]="'fa-phone'" iconSize="'small'"></ag-menu-item>
+		</a>
+		<a ag-bottomnav-item class="h-16 w-16">
+			<ag-menu-item [icon]="'fa-file-alt'" iconSize="'small'"></ag-menu-item>
+		</a>
+	</ag-bottomnav>
 </section>

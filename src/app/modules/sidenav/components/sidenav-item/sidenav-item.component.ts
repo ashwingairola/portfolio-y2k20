@@ -9,7 +9,7 @@ import {
 import { ClickableComponent } from 'src/app/components/clickable/clickable.component';
 
 @Component({
-	selector: 'ag-sidenav-item',
+	selector: 'a [ag-sidenav-item]',
 	templateUrl: './sidenav-item.component.html',
 	styleUrls: ['./sidenav-item.component.scss'],
 	animations: [

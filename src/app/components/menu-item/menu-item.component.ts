@@ -21,6 +21,7 @@ import {
 })
 export class MenuItemComponent {
 	@Input() icon!: string;
+	@Input() iconSize?: 'small' | 'medium' | 'large';
 	hovering: boolean;
 
 	constructor() {

@@ -1,3 +1,5 @@
+// TODO: Merge this with SidenavItemComponent.
+
 import { Component } from '@angular/core';
 import { ClickableComponent } from 'src/app/components/clickable/clickable.component';
 import {
@@ -9,7 +11,7 @@ import {
 } from '@angular/animations';
 
 @Component({
-	selector: 'ag-bottomnav-item',
+	selector: 'a[ag-bottomnav-item]',
 	templateUrl: './bottomnav-item.component.html',
 	styleUrls: ['./bottomnav-item.component.scss'],
 	animations: [
