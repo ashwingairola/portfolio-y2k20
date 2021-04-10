@@ -23,8 +23,7 @@
 			ag-sidenav-item
 			agTooltip="My Skills"
 			tooltipPosition="right"
-			[routerLink]="['']"
-			fragment="my-skills"
+			[routerLink]="'skills'"
 		>
 			<ag-menu-item [icon]="'fa-palette'"></ag-menu-item>
 		</a>
@@ -61,19 +60,18 @@
 <section class="block sm:hidden h-16">
 	<ag-bottomnav>
 		<a ag-bottomnav-item class="h-16 w-16" [routerLink]="['']">
-			<ag-menu-item [icon]="'fa-home'" iconSize="'small'"></ag-menu-item>
+			<ag-menu-item [icon]="'fa-home'" [iconSize]="'small'"></ag-menu-item>
 		</a>
-		<a ag-bottomnav-item class="h-16 w-16" [routerLink]="['projects']">
-			<ag-menu-item [icon]="'fa-code'" iconSize="'small'"></ag-menu-item>
+		<a ag-bottomnav-item class="h-16 w-16" [routerLink]="'projects'">
+			<ag-menu-item [icon]="'fa-code'" [iconSize]="'small'"></ag-menu-item>
 		</a>
 		<a
 			ag-bottomnav-item
 			class="h-16 w-16"
-			[routerLink]="['']"
-			fragment="my-skills"
+			[routerLink]="'skills'"
 			iconSize="'small'"
 		>
-			<ag-menu-item [icon]="'fa-palette'" iconSize="'small'"></ag-menu-item>
+			<ag-menu-item [icon]="'fa-palette'" [iconSize]="'small'"></ag-menu-item>
 		</a>
 		<a
 			ag-bottomnav-item
@@ -81,10 +79,10 @@
 			[routerLink]="['']"
 			fragment="contact"
 		>
-			<ag-menu-item [icon]="'fa-phone'" iconSize="'small'"></ag-menu-item>
+			<ag-menu-item [icon]="'fa-phone'" [iconSize]="'small'"></ag-menu-item>
 		</a>
 		<a ag-bottomnav-item class="h-16 w-16">
-			<ag-menu-item [icon]="'fa-file-alt'" iconSize="'small'"></ag-menu-item>
+			<ag-menu-item [icon]="'fa-file-alt'" [iconSize]="'small'"></ag-menu-item>
 		</a>
 	</ag-bottomnav>
 </section>
