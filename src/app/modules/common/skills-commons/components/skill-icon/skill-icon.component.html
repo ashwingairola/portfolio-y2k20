@@ -1,5 +1,5 @@
 <!-- Desktop/tablet view -->
-<section class="hidden md:block flex flex-col justify-between text-center">
+<figure class="hidden md:block flex flex-col justify-between">
 	<img
 		class="h-32 w-32 skill-icon inline-block"
 		[src]="skill.logo"
@@ -7,21 +7,25 @@
 		onerror="this.onerror = null; this.src='http:\/\/cdn.onlinewebfonts.com/svg/img_161528.svg';"
 		(mouseenter)="hovering = true"
 		(mouseleave)="hovering = false"
+		width="500"
 	/>
-	<div class="ag-text text-center mt-1" [@hovering]="hovering">
+	<figcaption
+		class="ag-text text-center mt-1 icon-caption"
+		[@hovering]="hovering"
+	>
 		<small>{{ skill.title }}</small>
-	</div>
-</section>
+	</figcaption>
+</figure>
 
 <!-- Mobile view -->
-<section class="block md:hidden flex flex-col justify-between text-center">
+<figure class="block md:hidden flex flex-col justify-between text-center">
 	<img
 		class="h-16 w-16 inline-block mx-auto"
 		[src]="skill.logo"
 		[alt]="skill.title"
 		onerror="this.onerror = null; this.src='http:\/\/cdn.onlinewebfonts.com/svg/img_161528.svg';"
 	/>
-	<div class="ag-text text-xs text-center mt-1">
+	<figcaption class="ag-text text-xs text-center mt-1">
 		<small>{{ skill.title }}</small>
-	</div>
-</section>
+	</figcaption>
+</figure>
