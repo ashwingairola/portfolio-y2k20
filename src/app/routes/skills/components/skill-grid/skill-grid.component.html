@@ -1,0 +1,27 @@
+<ng-container *ngIf="skills$ | async as skills; else loading">
+	<ng-container *ngIf="skills?.data && !skills?.error">
+		<h2 class="text-2xl mb-4 ag-heading">{{ categoryName }}</h2>
+		<div
+			class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-2 mb-5"
+		>
+			<ag-skill-icon
+				*ngFor="let skill of skills?.data"
+				[skill]="skill"
+			></ag-skill-icon>
+		</div>
+	</ng-container>
+</ng-container>
+
+<ng-template #loading>
+	<div
+		class="mb-4 rounded bg-app-secondary grid-title-placeholder anim-fade-in-out"
+	>
+		<div class="invisible">This is a grid title.</div>
+	</div>
+
+	<div class="icon-grid mb-5 anim-fade-in-out">
+		<div class="icon-placeholder" *agRepeat="8">
+			<ag-card class="icon-placeholder-content"></ag-card>
+		</div>
+	</div>
+</ng-template>

@@ -1,0 +1,62 @@
+[
+	{
+		"id": "angular",
+		"title": "Angular",
+		"proficiency": 3,
+		"logo": "assets/svg/angular.svg"
+	},
+	{
+		"id": "react",
+		"title": "React",
+		"proficiency": 3,
+		"logo": "assets/svg/react.svg"
+	},
+	{
+		"id": "html",
+		"title": "HTML5",
+		"proficiency": 3,
+		"logo": "assets/svg/html5.svg"
+	},
+	{
+		"id": "css",
+		"title": "CSS3",
+		"proficiency": 3,
+		"logo": "assets/svg/css3.svg"
+	},
+	{
+		"id": "sass",
+		"title": "SASS",
+		"proficiency": 2,
+		"logo": "assets/svg/sass.svg"
+	},
+	{
+		"id": "rxjs",
+		"title": "RxJS",
+		"proficiency": 3,
+		"logo": "assets/svg/rxjs.svg"
+	},
+	{
+		"id": "redux",
+		"title": "Redux",
+		"proficiency": 3,
+		"logo": "assets/svg/redux.svg"
+	},
+	{
+		"id": "redux-observable",
+		"title": "Redux Observable",
+		"proficiency": 3,
+		"logo": "assets/svg/redux-observable.svg"
+	},
+	{
+		"id": "jquery",
+		"title": "jQuery",
+		"proficiency": 3,
+		"logo": "assets/svg/jquery.svg"
+	},
+	{
+		"id": "webpack",
+		"title": "Webpack",
+		"proficiency": 2,
+		"logo": "assets/svg/webpack.svg"
+	}
+]

@@ -1,0 +1,30 @@
+<section>
+	<h1 class="text-4xl ag-heading mb-8 text-app-primary">Skills</h1>
+
+	<p class="mb-8">
+		These are my skills and the technologies with which I have worked or am
+		currently using.
+	</p>
+
+	<ag-skill-grid
+		categoryName="Programming Languages"
+		[skills$]="programmingLanguages$"
+	></ag-skill-grid>
+
+	<ag-skill-grid
+		categoryName="Frontend"
+		[skills$]="frontendSkills$"
+	></ag-skill-grid>
+
+	<ag-skill-grid
+		categoryName="Backend"
+		[skills$]="backendSkills$"
+	></ag-skill-grid>
+
+	<ag-skill-grid categoryName="Databases" [skills$]="dbSkills$"></ag-skill-grid>
+
+	<ag-skill-grid
+		categoryName="Testing"
+		[skills$]="testingSkills$"
+	></ag-skill-grid>
+</section>

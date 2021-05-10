@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 
-import { Skill } from '@ag-models';
+import { APIResponse, ESkillType, Skill } from '@ag-models';
 
-@Injectable()
+@Injectable({
+	providedIn: 'root'
+})
 export class SkillApiService {
 	constructor(private http: HttpClient) {}
 
@@ -13,5 +15,12 @@ export class SkillApiService {
 		return this.http
 			.get<Skill[]>('assets/data/skills/basics.json')
 			.pipe(catchError(() => []));
+	}
+
+	getSkillsByType(type: ESkillType): Observable<APIResponse<Skill[]>> {
+		return this.http.get<Skill[]>(`assets/data/skills/${type}.json`).pipe(
+			map(response => ({ data: response })),
+			catchError(error => of({ data: [], error }))
+		);
 	}
 }
