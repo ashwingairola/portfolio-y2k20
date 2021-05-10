@@ -10,26 +10,22 @@ import {
 	HyperlinkModule,
 	TooltipModule
 } from '@ag-modules';
+import { ProjectsCommonsModule, SkillsCommonsModule } from '@ag-modules/common';
 import { ProjectApiService, SkillApiService } from '@ag-apis';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { MyWorkComponent } from './components/my-work/my-work.component';
-// import { ProjectCardComponent } from './project-card/project-card.component';
 import { MySkillsComponent } from './components/my-skills/my-skills.component';
-import { SkillIconComponent } from './components/skill-icon/skill-icon.component';
 import { HeroPicComponent } from './components/hero-pic/hero-pic.component';
-import { ProjectsCommonsModule } from 'src/app/modules/common/projects-commons/projects-commons.module';
 
 @NgModule({
 	declarations: [
 		HomeComponent,
 		BannerComponent,
 		MyWorkComponent,
-		// ProjectCardComponent,
 		MySkillsComponent,
-		SkillIconComponent,
 		HeroPicComponent
 	],
 	imports: [
@@ -42,7 +38,8 @@ import { ProjectsCommonsModule } from 'src/app/modules/common/projects-commons/p
 		CardModule,
 		HyperlinkModule,
 		TooltipModule,
-		ProjectsCommonsModule
+		ProjectsCommonsModule,
+		SkillsCommonsModule
 	],
 	providers: [ProjectApiService, SkillApiService]
 })

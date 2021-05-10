@@ -6,6 +6,18 @@
 		"logo": "assets/svg/angular.svg"
 	},
 	{
+		"id": "html",
+		"title": "HTML5",
+		"proficiency": 3,
+		"logo": "assets/svg/html5.svg"
+	},
+	{
+		"id": "css",
+		"title": "CSS3",
+		"proficiency": 3,
+		"logo": "assets/svg/css3.svg"
+	},
+	{
 		"id": "web-components",
 		"title": "Web Components",
 		"proficiency": 2,

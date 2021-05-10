@@ -1,1 +1,29 @@
-<p>skills works!</p>
+<section>
+	<h1 class="text-4xl ag-heading mb-8 text-app-primary">Skills</h1>
+
+	<p class="mb-8">
+		These are my skills and the technologies with which I have worked or am
+		currently using.
+	</p>
+
+	<ng-container *ngIf="frontendSkills$ | async as frontendSkills; else loading">
+		<ng-container *ngIf="frontendSkills?.data && !frontendSkills?.error">
+			<div
+				class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-2"
+			>
+				<ag-skill-icon
+					*ngFor="let skill of frontendSkills?.data"
+					[skill]="skill"
+				></ag-skill-icon>
+			</div>
+		</ng-container>
+	</ng-container>
+
+	<ng-template #loading>
+		<div class="icon-grid">
+			<div class="icon-placeholder" *agRepeat="8">
+				<ag-card class="icon-placeholder-content"></ag-card>
+			</div>
+		</div>
+	</ng-template>
+</section>
