@@ -1,0 +1,14 @@
+[
+	{
+		"id": "jest",
+		"title": "Jest",
+		"proficiency": 2,
+		"logo": "assets/svg/jest.svg"
+	},
+	{
+		"id": "cypress",
+		"title": "Cypress",
+		"proficiency": 1,
+		"logo": "assets/svg/cypress.svg"
+	}
+]

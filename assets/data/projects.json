@@ -29,7 +29,7 @@
 		"company": "Personal project",
 		"description": "My portfolio website for the year 2020.",
 		"img": "assets/img/portfolio.png",
-		"liveUrl": "http://localhost:4200/",
-		"githubRepo": "ashwingairola/portfolio-y2k20"
+		"liveUrl": "https://ashwingairola.github.io/portfolio-y2k20",
+		"githubRepo": "https://github.com/ashwingairola/portfolio-y2k20"
 	}
 ]

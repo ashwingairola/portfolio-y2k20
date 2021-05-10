@@ -1,0 +1,26 @@
+[
+	{
+		"id": "js",
+		"title": "JavaScript",
+		"proficiency": 3,
+		"logo": "assets/svg/js.svg"
+	},
+	{
+		"id": "ts",
+		"title": "TypeScript",
+		"proficiency": 3,
+		"logo": "assets/svg/ts.svg"
+	},
+	{
+		"id": "nodejs",
+		"title": "Node.js",
+		"proficiency": 2,
+		"logo": "assets/svg/nodejs.svg"
+	},
+	{
+		"id": "python",
+		"title": "Python",
+		"proficiency": 1,
+		"logo": "assets/svg/python.svg"
+	}
+]
