@@ -6,90 +6,25 @@
 		currently using.
 	</p>
 
-	<h2 class="text-2xl mb-4 ag-heading">Programming Languages</h2>
+	<ag-skill-grid
+		categoryName="Programming Languages"
+		[skills$]="programmingLanguages$"
+	></ag-skill-grid>
 
-	<ng-container
-		*ngIf="programmingLanguages$ | async as programmingLanguages; else loading"
-	>
-		<ng-container
-			*ngIf="programmingLanguages?.data && !programmingLanguages?.error"
-		>
-			<div
-				class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-2 mb-5"
-			>
-				<ag-skill-icon
-					*ngFor="let skill of programmingLanguages?.data"
-					[skill]="skill"
-				></ag-skill-icon>
-			</div>
-		</ng-container>
-	</ng-container>
+	<ag-skill-grid
+		categoryName="Frontend"
+		[skills$]="frontendSkills$"
+	></ag-skill-grid>
 
-	<h2 class="text-2xl mb-4 ag-heading">Frontend</h2>
+	<ag-skill-grid
+		categoryName="Backend"
+		[skills$]="backendSkills$"
+	></ag-skill-grid>
 
-	<ng-container *ngIf="frontendSkills$ | async as frontendSkills; else loading">
-		<ng-container *ngIf="frontendSkills?.data && !frontendSkills?.error">
-			<div
-				class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-2 mb-5"
-			>
-				<ag-skill-icon
-					*ngFor="let skill of frontendSkills?.data"
-					[skill]="skill"
-				></ag-skill-icon>
-			</div>
-		</ng-container>
-	</ng-container>
+	<ag-skill-grid categoryName="Databases" [skills$]="dbSkills$"></ag-skill-grid>
 
-	<h2 class="text-2xl mb-4 ag-heading">Backend</h2>
-
-	<ng-container *ngIf="backendSkills$ | async as backendSkills; else loading">
-		<ng-container *ngIf="backendSkills?.data && !backendSkills?.error">
-			<div
-				class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-2 mb-5"
-			>
-				<ag-skill-icon
-					*ngFor="let skill of backendSkills?.data"
-					[skill]="skill"
-				></ag-skill-icon>
-			</div>
-		</ng-container>
-	</ng-container>
-
-	<h2 class="text-2xl mb-4 ag-heading">Databases</h2>
-
-	<ng-container *ngIf="dbSkills$ | async as dbSkills; else loading">
-		<ng-container *ngIf="dbSkills?.data && !dbSkills?.error">
-			<div
-				class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-2 mb-5"
-			>
-				<ag-skill-icon
-					*ngFor="let skill of dbSkills?.data"
-					[skill]="skill"
-				></ag-skill-icon>
-			</div>
-		</ng-container>
-	</ng-container>
-
-	<h2 class="text-2xl mb-4 ag-heading">Testing</h2>
-
-	<ng-container *ngIf="testingSkills$ | async as testingSkills; else loading">
-		<ng-container *ngIf="testingSkills?.data && !testingSkills?.error">
-			<div
-				class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-2 mb-5"
-			>
-				<ag-skill-icon
-					*ngFor="let skill of testingSkills?.data"
-					[skill]="skill"
-				></ag-skill-icon>
-			</div>
-		</ng-container>
-	</ng-container>
-
-	<ng-template #loading>
-		<div class="icon-grid">
-			<div class="icon-placeholder" *agRepeat="8">
-				<ag-card class="icon-placeholder-content"></ag-card>
-			</div>
-		</div>
-	</ng-template>
+	<ag-skill-grid
+		categoryName="Testing"
+		[skills$]="testingSkills$"
+	></ag-skill-grid>
 </section>
