@@ -1,0 +1,20 @@
+[
+	{
+		"id": "express",
+		"title": "Express.js",
+		"proficiency": 2,
+		"logo": "assets/svg/express.svg"
+	},
+	{
+		"id": "nestjs",
+		"title": "NestJS",
+		"proficiency": 2,
+		"logo": "assets/svg/nestjs.svg"
+	},
+	{
+		"id": "django",
+		"title": "Django",
+		"proficiency": 1,
+		"logo": "assets/svg/django.svg"
+	}
+]
