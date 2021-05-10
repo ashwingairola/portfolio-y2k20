@@ -4,6 +4,7 @@ export enum ESkillType {
 	DATABASE = 'database',
 	TOOLS = 'tools',
 	LANGUAGES = 'languages',
+	TESTING = 'testing',
 	MISC = 'misc'
 }
 
