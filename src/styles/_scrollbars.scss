@@ -1,4 +1,4 @@
-@import './tailwind.scss';
+@import 'tailwind';
 
 // SCROLLBARS
 
@@ -9,7 +9,7 @@
 
 *::-webkit-scrollbar-thumb {
 	border-radius: 99px;
-	@extend .bg-primary;
+	@apply bg-primary;
 }
 
 *::-webkit-scrollbar-corner {

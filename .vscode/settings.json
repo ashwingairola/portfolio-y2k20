@@ -17,6 +17,7 @@
 	},
 	"[xml]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "python.pythonPath": "C:\\Users\\ACER\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe"
+	},
+	"python.pythonPath": "C:\\Users\\ACER\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
+	"cSpell.words": ["fortawesome", "fontawesome"]
 }

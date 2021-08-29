@@ -15,20 +15,19 @@
 			"prefix": "ag",
 			"architect": {
 				"build": {
-					"builder": "@angular-builders/custom-webpack:browser",
+					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"customWebpackConfig": {
-							"path": "./webpack.config.js"
-						},
 						"outputPath": "dist/portfolio-y2k20",
 						"baseHref": "/",
 						"index": "src/index.html",
 						"main": "src/main.ts",
 						"polyfills": "src/polyfills.ts",
 						"tsConfig": "tsconfig.app.json",
-						"extractCss": true,
 						"aot": true,
 						"assets": ["src/favicon.ico", "src/assets"],
+						"stylePreprocessorOptions": {
+							"includePaths": ["src/styles"]
+						},
 						"styles": [
 							"src/styles/styles.scss",
 							"node_modules/@glidejs/glide/dist/css/glide.core.min.css"
@@ -46,10 +45,8 @@
 							"optimization": true,
 							"outputHashing": "all",
 							"sourceMap": false,
-							"extractCss": true,
 							"namedChunks": false,
 							"extractLicenses": true,
-							"vendorChunk": false,
 							"buildOptimizer": true,
 							"budgets": [
 								{
@@ -58,18 +55,27 @@
 									"maximumError": "5mb"
 								}
 							]
+						},
+						"development": {
+							"buildOptimizer": false,
+							"optimization": false,
+							"vendorChunk": true,
+							"extractLicenses": false,
+							"sourceMap": true,
+							"namedChunks": true
 						}
 					}
 				},
 				"serve": {
-					"builder": "@angular-builders/custom-webpack:dev-server",
+					"defaultConfiguration": "development",
+					"builder": "@angular-devkit/build-angular:dev-server",
 					"options": {
-						"customWebpackConfig": {
-							"path": "./webpack.config.js"
-						},
 						"browserTarget": "portfolio-y2k20:build"
 					},
 					"configurations": {
+						"development": {
+							"browserTarget": "portfolio-y2k20:build:development"
+						},
 						"production": {
 							"browserTarget": "portfolio-y2k20:build:production"
 						}
@@ -97,14 +103,9 @@
 					}
 				},
 				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
+					"builder": "@angular-eslint/builder:lint",
 					"options": {
-						"tsConfig": [
-							"tsconfig.app.json",
-							"tsconfig.spec.json",
-							"e2e/tsconfig.json"
-						],
-						"exclude": ["**/node_modules/**"]
+						"lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
 					}
 				},
 				"e2e": {
@@ -126,5 +127,8 @@
 			}
 		}
 	},
-	"defaultProject": "portfolio-y2k20"
+	"defaultProject": "portfolio-y2k20",
+	"cli": {
+		"defaultCollection": "@angular-eslint/schematics"
+	}
 }
