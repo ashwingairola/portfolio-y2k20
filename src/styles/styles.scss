@@ -1,9 +1,9 @@
-@import './reset.scss';
-@import './tailwind.scss';
-@import './themes.scss';
-@import './typography.scss';
-@import './scrollbars.scss';
-@import './animations.scss';
+@import './reset';
+@import './tailwind';
+@import './themes';
+@import './typography';
+@import './scrollbars';
+@import './animations';
 @import './../../node_modules/@angular/cdk/overlay-prebuilt.css';
 
 body {

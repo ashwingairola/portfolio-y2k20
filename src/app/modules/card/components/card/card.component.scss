@@ -1,21 +1,20 @@
-@import '../../../../../styles/tailwind.scss';
+@import 'tailwind';
 
 .card-container {
 	::ng-deep {
 		ag-card-image:first-child {
-			@extend .-mt-3;
-			@extend .-mx-3;
+			@apply -mt-3 -mx-3;
 
 			img {
-				@extend .rounded-t;
+				@apply rounded-t;
 			}
 		}
 
 		ag-card-image:only-child {
-			@extend .-mb-3;
+			@apply -mb-3;
 
 			img {
-				@extend .rounded-b;
+				@apply rounded-b;
 			}
 		}
 	}
